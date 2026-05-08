@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Cr1SWLenSUeodHqmGdG3OA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk" DesignTimeRectangle="497, 383, 221, 387" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='predictive-search-products' tag='A' visibleinnertext='*' /&gt;" Guid="4b5c4670-ec53-43e4-9bec-85e6b155e2d8" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="69a20c39654d5fa5e9d6f6e1ede838ff.jpg" xmlns="">0jE8ZhM8hb0yz2sCeBZZ7Ag</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

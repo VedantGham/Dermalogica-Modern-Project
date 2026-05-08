@@ -1,0 +1,421 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DermalogicaUk_Price_Extraction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_dt_ProductReport" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_DermaProduct" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>DermalogicaUk_Price_Extraction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Process Extracts price from Dermalogica UK website" DisplayName="DermalogicaUk_Price_Extraction" sap:VirtualizedContainerService.HintSize="652.6666666666666,5476.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_ProductNotFound" />
+      <Variable x:TypeArguments="x:String" Default="NA" Name="str_ProductPrice" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_SignUpPopUpExists" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_WebsiteLoaded" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_ProductExists" />
+      <Variable x:TypeArguments="x:Boolean" Name="bool_IndiaPopUpExists" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Logs message about getting price from Dermalogica UK website" sap:VirtualizedContainerService.HintSize="490,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting price from Dermalogica UK website&quot;]" />
+    <TryCatch DisplayName="Try extracting price from Dermalogica UK website" sap:VirtualizedContainerService.HintSize="490,5246.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Dermalogica Skin Care  Official – Derm" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4844" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,4672" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="str_DermalogicaUKPrice" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheckState DisplayName="Check App State 'Would you like to visit…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="t9bbed5x4USeYvrixVApgA" DesignTimeRectangle="971, 425, 150, 65" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='spicegems_cr_btn_no' aaname='No' /&gt;" Guid="a979e618-ee76-47e0-a9c6-8cff92dc7f8d" InformativeScreenshot="c2080dd9f971cde5d6d274e034d1a992.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/YinS-M--QECD16FuuMIbHg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="bmJSga2i5Uy52VL72va2uQ" DesignTimeRectangle="722, 336, 483, 33" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='spicegems_cr_mod_msg' tag='MSG' aaname='Would you like to visit the India site?' /&gt;" Guid="07646c62-e74e-4a92-9233-e2b167653446" InformativeScreenshot="0d3b56d56eaf38995246b489e1a932ec.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/hvs4vdlPzk6UECg1c6iEdg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'We use cookies (and sim…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept All'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="cbd7lkCG806pT1UeTB0a7A" DesignTimeRectangle="1198, 628, 440, 86" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='allow cookies' aria-role='button' tag='BUTTON' aaname='Accept All' /&gt;" Guid="2ba35ea7-f567-4568-a954-3c5e5ac4f225" InformativeScreenshot="0a46608397bf281d5ea35a41eaca5948.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/FjY6uins0kmtv_RdnkRnfQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="mom_xrO21EOxTWSWaOZaWA" DesignTimeRectangle="290, 446, 1348, 152" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cookieconsent:desc' tag='SPAN' aaname='*We use cookies (and similar techniques) to improve your experience on our site. Cookies enable you to enjoy certain features (such as saving your online &amp;quot;shopping basket&amp;quot;), social sharing functionality (for platforms like Facebook, Instagram, etc.) and to tailor messages and display ads to your interests (on our site, and others). They also help us understand how our site is being used. By clicking &amp;quot;Customise&amp;quot; you can manage your Cookie Settings (you can do this anytime). By clicking &amp;quot;Accept&amp;quot; you consen*' /&gt;" Guid="e74102c1-3379-4846-b80a-8e5296290313" InformativeScreenshot="db65cd21b503debbad42fba9138e843a.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/xOuJNRTPs0C32TmrboaSIQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'SHOP SHOP product type …'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="Q_NBe82smESXvKzzrZa2bw" DesignTimeRectangle="1662, 212, 66, 66" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl aria-label='Open search' tag='BUTTON' type='' class='button button-unstyled search-modal__button header-actions__action' aaname='                             ' matching:aria-label='fuzzy' fuzzylevel:aria-label='0.8' matching:class='fuzzy' fuzzylevel:class='0.8' matching:aaname='fuzzy' fuzzylevel:aaname='0.8' /&gt;" Guid="acbb75e6-7fca-4234-8b3c-11baf02ceac0" InformativeScreenshot="7f3278f6854162cf11e5192c4ae7df1d.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/i-FEsXUIVUCl4Ss8IDStMA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="3">
+                                <uix:Target DesignTimeRectangle="71, 212, 355, 66" FuzzySelectorArgument="&lt;webctrl type='' parentid='header-component' tag='DIV' class='header__column header__column--left' aaname='                                                                                                                                                                                                                                              ' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='SHOP&amp;#xA;                      &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                    &amp;#xA;                    &amp;#xA;                      &amp;#xA;                        &amp;#xA;                          &amp;#xA;                            &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                            SHOP&amp;#xA;                          &amp;#xA;                          &amp;#xA;                            &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                          &amp;#xA;                        &amp;#xA;                        &amp;#xA;                        &amp;#xA;                          &amp;#xA;                                &amp;#xA;&amp;#xA;                                    &amp;#xA;                                      &amp;#xA;                                        product type&amp;#xA;                                        &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              best sellers&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              new arrivals&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              skin kits and sets&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              cleansers&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              moisturisers&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              serums&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              exfoliants&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              spf&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              masques&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              toners&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              eye treatments&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              retinol&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              body therapy&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              lip care&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              e-gift cards&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                    &amp;#xA;                                  &amp;#xA;                                &amp;#xA;                                &amp;#xA;&amp;#xA;                                    &amp;#xA;                                      &amp;#xA;                                        product range&amp;#xA;                                        &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              daily skin health&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              dynamic skin&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              multivitamin power&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              biolumin-c&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              ultracalming&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              active clearing&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              phyto nature&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              powerbright&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              clear start&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                    &amp;#xA;                                  &amp;#xA;                                &amp;#xA;                                &amp;#xA;&amp;#xA;                                    &amp;#xA;                                      &amp;#xA;                                        skin concern&amp;#xA;                                        &amp;#xA;  &amp;#xA;  &amp;#xA;&amp;#xA;&amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                      &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              adult breakouts&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              teen breakouts&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              brightening&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              dryness and dehydration&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              oiliness&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              sensitivity and redness&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              signs of skin ageing&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              uneven skin tone&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              menopausal skin&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                            &amp;#xA;                                              &amp;#xA;                                              men&amp;apos;s skin health&amp;#xA;                                            &amp;#xA;                                          &amp;#xA;                                    &amp;#xA;                                  &amp;#xA;                                &amp;#xA;                                &amp;#xA;&amp;#xA;                                    &amp;#xA;                                      &amp;#xA;   ' /&gt;" Guid="eaab8a79-4b63-4d52-b722-07a782e66e74" SearchSteps="FuzzySelector" />
+                                <uix:Target DesignTimeRectangle="1739, 227, 36, 36" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;header&amp;gt;header-component&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;header-actions&amp;gt;anchored-popover-component&amp;gt;button&amp;gt;span&amp;gt;svg' parentid='header-component' tag='svg' /&gt;" Guid="29425e8d-e5df-4f6e-aa8f-4beaa3ffcc19" SearchSteps="Selector" />
+                                <uix:Target DesignTimeRectangle="1790, 212, 66, 66" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='CART-ICON' type='' class='&amp;#xA;    header-actions__cart-icon&amp;#xA;    &amp;#xA;  ' aaname='         ' matching:class='fuzzy' fuzzylevel:class='0.8' matching:aaname='fuzzy' fuzzylevel:aaname='0.8' check:innerText='Total items in bag: 0' /&gt;" Guid="d9a20dd4-cbaa-42dd-a850-097682a058a1" SearchSteps="FuzzySelector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="NTYgmZCRekijc7pb6iTSOg" DesignTimeRectangle="11, 195, 1905, 100" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='header-component' tag='DIV' /&gt;" Guid="77a1919f-d77c-41b7-ac6a-031c4b1831f8" InformativeScreenshot="781e72d7deeca9cfcf18303899aa818f.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/b705JrWxGEqnQxzdw5JFwg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State for input for Dermalogica UK search bar" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,738" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT cmdk-input'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,238.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Text="[in_DermaProduct.SpecificContent(&quot;Product&quot;).ToString + &quot; &quot; + in_DermaProduct.SpecificContent(&quot;Ml&quot;).ToString]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="QIC6brflLkSlcPT3TH6PwQ" DesignTimeRectangle="473, 253, 930, 67" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cmdk-input' tag='INPUT' /&gt;" Guid="6ebf659a-e5cf-4a89-b924-58306598285b" InformativeScreenshot="4848990dfcab5205f9aa8df0d54e0697.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/E3uyDLmLtEuekTIr_l1_bg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NTypeInto.Target>
+                        <uix:NTypeInto.VerifyOptions>
+                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          </uix:VerifyExecutionTypeIntoOptions>
+                        </uix:NTypeInto.VerifyOptions>
+                      </uix:NTypeInto>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="m1CccS5uPk2GBPzKsL0osQ" DesignTimeRectangle="473, 253, 930, 67" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='cmdk-input' tag='INPUT' /&gt;" Guid="5d790e4f-5cce-4f65-a09b-ef071ecba6d3" InformativeScreenshot="eaf701c7931479a8dd801b25edaae605.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/VMB99M_L-UqVH7fiPlCxDA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'Daily Superfoliant Exfo…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Daily Superfoliant Exfo…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="-hXLaIqKc0ecPfDbMxS8ew" DesignTimeRectangle="497, 385, 221, 387" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='predictive-search-products' tag='A' aaname='*' visibleinnertext='*' /&gt;" Guid="3f6d7f73-2842-40f3-ab05-53cdf61983fe" InformativeScreenshot="8e860c337e9a1556fa4d8c65c111b10a.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/A64xVqwUk0Ok8ciq0hhuFA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk" ContentHash="Cr1SWLenSUeodHqmGdG3OA" DesignTimeRectangle="497, 383, 221, 387" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='predictive-search-products' tag='A' visibleinnertext='*' /&gt;" Guid="4b5c4670-ec53-43e4-9bec-85e6b155e2d8" InformativeScreenshot="69a20c39654d5fa5e9d6f6e1ede838ff.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/kGo6zEnYIEOn3700o1MLlA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NCheckState DisplayName="Check App State 'checked'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,822" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'checked'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="dermalogica.co.uk/products/daily-superfoliant" ContentHash="sa8WNsN3bEiFRg82vs9dsA" DesignTimeRectangle="1179, 921, 216, 69" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='INPUT' type='radio' aria-label='&quot;+in_DermaProduct.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml' /&gt;&quot;]" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='radio' class='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="98a4131d-2bdf-4c50-af1c-b4fe05a72868" InformativeScreenshot="2b164e025b3b06a4088f06e87692b2ef.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/ZUR-fReiBku1xVepMrWAXg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Daily Superfoliant, Face Exfoliant, Charcoal Exfoliant | Dermalogica® – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="1178, 920, 218, 71" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='57g' /&gt;" Guid="a8e8bc7d-1e86-4d2b-8bf0-f9cab77a81fc" SearchSteps="Selector" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Volume not present&quot;]" />
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk/products/daily-superfoliant" ContentHash="uzI1_LE9_0mTSmk2Ke3TMw" DesignTimeRectangle="1409, 921, 216, 69" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='INPUT' type='radio' aria-label='&quot;+in_DermaProduct.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml' /&gt;&quot;]" Guid="b5d4b916-dc28-4e0b-80ca-17f1e504737d" InformativeScreenshot="1bc573b089925bd6abd650a0405a7fe2.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/nZfxlbXoAUy_8mMnVC27HA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1178, 920, 218, 71" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" Guid="3c594874-6f66-4fca-b850-a69a32d698ed" SearchSteps="Selector" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NCheckState.Target>
+                </uix:NCheckState>
+                <uix:NGetText DisplayName="Get Price" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="34d855ce-8346-432a-8bd9-f2f0b5fafc5d" TextString="[str_DermalogicaUKPrice]" Version="V5">
+                  <uix:NGetText.Target>
+                    <uix:TargetAnchorable BrowserURL="dermalogica.co.uk/products/special-cleansing-gel" ContentHash="A4YWWD03ik2msJVzjb_WcA" DesignTimeRectangle="1000, 414, 91, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='price' tag='SPAN' aaname='*' visibleinnertext='*' /&gt;" Guid="11743f71-0c7a-46cd-8500-8192d708512f" InformativeScreenshot="8debd4de5cc53f546211034d2338c3cf.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/HEbdJGCW1UOmQ7hk6b_25w" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                  </uix:NGetText.Target>
+                </uix:NGetText>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[&quot;The price of &quot; +in_DermaProduct.SpecificContent(&quot;Product&quot;).ToString + &quot; on Dermalogica UK website is: &quot; + str_DermalogicaUKPrice]" />
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.OCREngine>
+            <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+              <ActivityFunc.Argument>
+                <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+              </ActivityFunc.Argument>
+            </ActivityFunc>
+          </uix:NApplicationCard.OCREngine>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="teNorS4zykq-mSdlbnmQAg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH0SURBVFhH7ZXPSwJBHMX7L8swOtSlDh261CnoEl0iSCvwUERBhwoSKoM6aIcikFDC3cxcs6hMLX+umua+Zrb1oDtjjWxE4YN32N03Xz773Z3v9PQ5ZPymuwD/D6DXITHNylJbCuANpXCXLpl8/Zhn5qktBQjd58BSsVxF3wK7C38RgBTiFPsxgKktBYfBFJSkiny5hkr1HblSFdFEEQeBNCY2b/Sc5QCjq2EE41loRiGeNE3D3kUSkpUAY2sRvBQqRonvqV5nowoD2JwSbkh7rZIwwNx+nCzjN75ACp7Ir9j1J3F0mcZTpkzu8vPCAKfhjLHUrKuHAoZc4aZ8v1OGJ5A0EmYJA3y+kVn0Zxtfj5jy1ANLMoqVmpFsljCAyimUU6tkrpvzDdPusCQMQL8xS+pbDTbOwULBlGfVSDZLGOCWDByepndipjz1yEoYtfe6kWqWMIAnkDKWmpXOVwiEQnKNo1bG+EYE10/s9lMJA0xuRvUfjif6hI7iu1RJH1baF7NSGID6mOxvq9QRgJ1sK7/Cnwetol1IZNnbtyMAahsZMKu+R2TI9munl+Ib5j1xuMlkpJ+u1R0DNGxflDHjjmH7PAGflMFZJAuv9Kpfz7pv9ec0N7gsY9h1xXRrzYa/BdDqdsNI1B0BWOkuQBfglwFkfAAqVlc1J3cXfgAAAABJRU5ErkJggg==" InformativeScreenshot="4e41c086187b7922c7d1eecca34b3ba0.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/837p_l-XNUKZJPJRAP02XA" Selector="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" Url="https://www.dermalogica.co.uk/" Version="V3">
+              <uix:TargetApp.Arguments>
+                <InArgument x:TypeArguments="x:String" />
+              </uix:TargetApp.Arguments>
+              <uix:TargetApp.WorkingDirectory>
+                <InArgument x:TypeArguments="x:String" />
+              </uix:TargetApp.WorkingDirectory>
+            </uix:TargetApp>
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,108" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Rethrow sap:VirtualizedContainerService.HintSize="454,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="488,108" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,274" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_DermaProduct.SpecificContent(&quot;Product Name&quot;).ToString,in_DermaProduct.SpecificContent(&quot;Oz&quot;).ToString,in_DermaProduct.SpecificContent(&quot;ml&quot;).ToString,str_ProductPrice,in_Config(&quot;DermalogicaUKWebsiteName&quot;).ToString,str_ProductNotFound}]" DataTable="[io_dt_ProductReport]" DisplayName="Add product name and price to product report data table" sap:VirtualizedContainerService.HintSize="416,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+              </Sequence>
+            </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CommentOut>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

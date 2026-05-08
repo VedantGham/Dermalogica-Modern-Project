@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="XbSJnVjh30OLIqjXkwoxTg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="1802, 256, 62, 63" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' url='https://www.dermalogica.com/' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;circle' tag='circle' /&gt;" Guid="98e89122-c31f-4dbd-8ae6-e2d8d82ab538" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6915643a46278bbbf40efddbaf3d5da9.jpg" xmlns="">0dUSH7FkJgEyhCOcHn1xZ_A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

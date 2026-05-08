@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Qw5cgo28_U-i81ImNnCe6Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.in" DesignTimeRectangle="1368, 866, 188, 61" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' /&gt;" Guid="31057ff3-87ce-4190-9997-d82f6cd3c061" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Skin Care Products Online at Best Prices | Dermalogica India' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a340907180bc220c6d184efcd0dac9fc.jpg" xmlns="">0ih6XwcbGHkW7TaQ4KeQurQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

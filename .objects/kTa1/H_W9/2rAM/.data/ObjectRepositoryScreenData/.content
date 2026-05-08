@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="xqxqCPt3skeuQnaMMvi4Tw" Reference="mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="4wHBu7-iUkSLcaXbQTa3MA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgBAMAAAAQtmoLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURSIrMSMsMlphZmJpbYOIi4mOkY+Ul5WanJqfoba5u7y/wcfJyvX19f///zs3Ut0AAABnSURBVFjDYxgFo2AUjAL6AN67QBCA4HPcRQM3RzUMmIYrLgjgTIyGiwy4waiGUQ2kaLhzBgYSiNOAAAWjGqin4VoaDCgQp2E0eY9qgGpYgqg/vInSgA5GNdBdwygYBaNgFNAEMDAAADT6hMUNqvcMAAAAAElFTkSuQmCC" Reference="mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw" Selector="&lt;html app='chrome.exe' title='LOOKFANTASTIC - Beauty, Fragrances, Skincare &amp;amp; Haircare' /&gt;" Url="https://www.lookfantastic.com/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="f2d01d20a3c6fc4559bfdaac82363839.jpg" xmlns="">0V1II-wmMME-h3mViitA1rA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

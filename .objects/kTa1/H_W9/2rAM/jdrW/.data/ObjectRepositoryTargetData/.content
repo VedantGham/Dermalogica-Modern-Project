@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4-IldVjym0yBqHTXgYMc-A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com/p/the-inkey-list-omega-water-cream-moisturizer-50ml/13493315" DesignTimeRectangle="1215, 380, 115, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="8538ea6f-9d3f-4cba-8986-c98439e4846a" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cd38af8b8657941b142d9ad2284399fe.jpg" xmlns="">0tLqZOkg3PUCNfRyjBVS6xg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

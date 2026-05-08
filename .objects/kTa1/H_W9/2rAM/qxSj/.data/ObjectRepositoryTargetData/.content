@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qZRtE-9CMkmfGWCq_1fp6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com" DesignTimeRectangle="1108, 286, 453, 92" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='LISTRAK-POPUP' /&gt;&lt;webctrl shadowhostid='' tag='SPAN' aaname='*' /&gt;" Guid="eb327b64-ade6-47de-8f7f-9996eb03ebda" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8457b21f98e4d34fc59cbcec34289bc3.jpg" xmlns="">0IQRsaZCq-0OOYgJb4N7Ogg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

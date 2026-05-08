@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CD74oFUBvEao10wH1BxTkQ" Reference="mloyvZZYp0uchJWViZ6yLQ/c-JKoiI8ekWRk12BzZVD8g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com/p/dermalogica-multi-active-toner-250ml/10363536" DesignTimeRectangle="1364, 820, 151, 84" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='  &quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml  ' parentid='size-wrapper' tag='BUTTON' type='button' /&gt;&quot;]" Guid="d5dcce39-9278-4c0d-a73b-b293f27bcc1f" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="224b891d939dde775a5d917afab12904.jpg" xmlns="">0x81fZyCl10eVloHD5JkIPg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="iulFspG2aUOZCbWr3T12wQ" Reference="mloyvZZYp0uchJWViZ6yLQ/SdWbe9vuGEOF1MMQ-VGm4A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com/search" DesignTimeRectangle="1449, 425, 399, 399" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='product-list' tag='IMG' aaname='Dermalogica &quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c)(0).ToString+&quot;*' /&gt;&quot;]" Guid="d0ccd6b4-3c2d-4d36-a357-8b9c2a11446d" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e7972c453eb32e868d4c1d03ff3e7327.jpg" xmlns="">0fNHhIwnfRkG9rhlqq-lLqA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

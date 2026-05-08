@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="76aN0oUxSUObJ8pOHuMUYQ" Reference="mloyvZZYp0uchJWViZ6yLQ/klyK-eJFeUaEf11FZ0pI5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com/products/daily-microfoliant" DesignTimeRectangle="1173, 969, 144, 54" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Oz&quot;).ToString+&quot;*oz*' tag='LABEL' /&gt;&quot;]" Guid="a3c764f1-ba23-4c03-83fe-4683f8a3b145" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Daily Microfoliant Exfoliator Smooths &amp;amp; Brightens Skin | Dermalogica®' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f3efeecaf84892d46af21e688c6e11f2.jpg" xmlns="">0xIackQLe9UKRyrjtec5zTQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

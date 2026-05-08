@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="VfA455NMOEiSxayKSznaYw" Reference="mloyvZZYp0uchJWViZ6yLQ/qYUXKU7YekeZmz3_i4ujXA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com/products/multi-active-toner" DesignTimeRectangle="1173, 739, 144, 54" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Oz&quot;).ToString+&quot;*oz*' tag='LABEL' /&gt;&quot;]" Guid="a40ab0ec-a130-4674-9b4f-31e9bd2f279e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Multi-Active Toner, Hydrating Spray Toner | Dermalogica®' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Interactive]">
+      <imageRef attrName="InformativeScreenshot" originalValue="cf93871e6bd78108338c33a9988313bd.jpg" xmlns="">01DhYynB3XECnI0CfjzFGVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

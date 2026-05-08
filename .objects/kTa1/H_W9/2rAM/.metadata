@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome LOOKFANTASTIC - Beauty, Fragrances, Sk",
+  "Type": "Screen",
+  "Id": "2rAMa63uwEq3SCHnOjxLSw",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/H_W9QIvOwkKXjfvrK92P_A",
+  "Created": "2026-05-07T14:33:11.8581589Z",
+  "Updated": "2026-05-07T14:33:11.8581589Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

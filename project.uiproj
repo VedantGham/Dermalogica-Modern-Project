@@ -1,0 +1,6 @@
+{
+  "Name": "Dermalogica_Modern_Performer",
+  "ProjectType": "Process",
+  "Description": "Dermalogica Performer which extracts data from websites using Modern activities.",
+  "MainFile": "Main.xaml"
+}

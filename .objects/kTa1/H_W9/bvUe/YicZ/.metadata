@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Keyboard Shortcuts",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "YicZVCJexUS6spIkQlwDDA",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/YicZVCJexUS6spIkQlwDDA",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/bvUeqjpBvUqjm8DcUaKKAQ",
+  "Created": "2026-05-06T11:01:41.4771085Z",
+  "Updated": "2026-05-06T11:01:41.4771085Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

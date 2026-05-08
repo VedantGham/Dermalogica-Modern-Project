@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DMCp1vgG5k-x_kTXmPCqwg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com" DesignTimeRectangle="1303, 744, 187, 61" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' aaname='*' /&gt;" Guid="55d2a462-61ac-47db-b69f-45b4219071d6" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ca34bbb8645f3b87239bb316cef37e75.jpg" xmlns="">0xjXEH8nV1Ua0TsLbWr0m-A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

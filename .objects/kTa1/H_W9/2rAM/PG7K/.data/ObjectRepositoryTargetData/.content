@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YqA6YI3-FEOJGqdBzmLdvw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com" DesignTimeRectangle="1635, 147, 75, 75" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='LISTRAK-POPUP' /&gt;&lt;webctrl id='ltkmodal-close' shadowhostid='' tag='BUTTON' aaname='*' /&gt;" Guid="21e81f07-dd29-42b9-a423-2dd6e3c58f75" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="27eb3296c43598ef226f2ecf5fcc050c.jpg" xmlns="">0YQyPnXPfmESUen74VMznhQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

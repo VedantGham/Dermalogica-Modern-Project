@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="teNorS4zykq-mSdlbnmQAg" Reference="mloyvZZYp0uchJWViZ6yLQ/837p_l-XNUKZJPJRAP02XA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="HZYV9q7cwEygRaRuqRUraQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH0SURBVFhH7ZXPSwJBHMX7L8swOtSlDh261CnoEl0iSCvwUERBhwoSKoM6aIcikFDC3cxcs6hMLX+umua+Zrb1oDtjjWxE4YN32N03Xz773Z3v9PQ5ZPymuwD/D6DXITHNylJbCuANpXCXLpl8/Zhn5qktBQjd58BSsVxF3wK7C38RgBTiFPsxgKktBYfBFJSkiny5hkr1HblSFdFEEQeBNCY2b/Sc5QCjq2EE41loRiGeNE3D3kUSkpUAY2sRvBQqRonvqV5nowoD2JwSbkh7rZIwwNx+nCzjN75ACp7Ir9j1J3F0mcZTpkzu8vPCAKfhjLHUrKuHAoZc4aZ8v1OGJ5A0EmYJA3y+kVn0Zxtfj5jy1ANLMoqVmpFsljCAyimUU6tkrpvzDdPusCQMQL8xS+pbDTbOwULBlGfVSDZLGOCWDByepndipjz1yEoYtfe6kWqWMIAnkDKWmpXOVwiEQnKNo1bG+EYE10/s9lMJA0xuRvUfjif6hI7iu1RJH1baF7NSGID6mOxvq9QRgJ1sK7/Cnwetol1IZNnbtyMAahsZMKu+R2TI9munl+Ib5j1xuMlkpJ+u1R0DNGxflDHjjmH7PAGflMFZJAuv9Kpfz7pv9ec0N7gsY9h1xXRrzYa/BdDqdsNI1B0BWOkuQBfglwFkfAAqVlc1J3cXfgAAAABJRU5ErkJggg==" Reference="mloyvZZYp0uchJWViZ6yLQ/837p_l-XNUKZJPJRAP02XA" Selector="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" Url="https://www.dermalogica.co.uk/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="4e41c086187b7922c7d1eecca34b3ba0.jpg" xmlns="">0l-Q9EQ97SU2uoUdbgwb1IA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

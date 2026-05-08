@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YyEMtOuMZEyagADBLZ0VuA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk" DesignTimeRectangle="393, 705, 997, 191" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='CybotCookiebotDialogBodyContent' tag='DIV' /&gt;" Guid="d7aeaade-989e-48bd-991c-7bdf76a4e6e7" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='40637370' title='Beauty Flash - Home Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="74068df3324512800280f302f437abcc.jpg" xmlns="">0pQC76AY_Gk23MtkmPLpUJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

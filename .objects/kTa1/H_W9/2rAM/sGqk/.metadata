@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Let’s Tailor Your Exper…(1)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "sGqktLYyc0qsj5MB3Yg8yQ",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/sGqktLYyc0qsj5MB3Yg8yQ",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw",
+  "Created": "2026-05-08T14:17:58.5504543Z",
+  "Updated": "2026-05-08T14:17:58.5504543Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

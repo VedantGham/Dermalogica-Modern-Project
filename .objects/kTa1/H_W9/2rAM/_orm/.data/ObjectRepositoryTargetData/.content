@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RgW019Bg7kaIiHAmQDPO3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com" DesignTimeRectangle="361, 551, 356, 37" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='onetrust-policy-title' tag='H2' aaname='*Let’s Tailor Your Experience*' /&gt;" Guid="b7d62443-344b-44f5-8407-061c13faa4dd" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3b81cfeaaa1018a8d1ec4ab2a9f179ff.jpg" xmlns="">0cUse4Tfnl0uWHtnW0PrCVw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

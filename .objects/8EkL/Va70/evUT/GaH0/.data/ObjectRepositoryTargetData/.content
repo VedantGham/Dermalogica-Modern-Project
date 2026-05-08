@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5Sk2LwZI6UaZR5oIukdJMg" Reference="mloyvZZYp0uchJWViZ6yLQ/GaH0ZxYymUqVD_c5Iz3ojA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk/dermalogica-precleanse" DesignTimeRectangle="1178, 663, 470, 77" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl id='super-product-table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='STRONG' aaname='Dermalogica*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString+&quot;*&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml' /&gt;&quot;]" Guid="705a828c-4da8-4b4e-9c2d-f3ca12e74679" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.beautyflash.co.uk/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="62391c006ef0b0d8a0f7f954ad0a74dd.jpg" xmlns="">0f5cQPkiVV0S4SxxeL0sJGw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Beauty Flash - Home Page",
+  "Type": "Screen",
+  "Id": "evUTPM52f0Ka8fKYNxbOWg",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/evUTPM52f0Ka8fKYNxbOWg",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/Va70oi_P_Uu7_DKLNG7KyA",
+  "Created": "2026-05-08T12:17:34.6643556Z",
+  "Updated": "2026-05-08T12:17:34.6643556Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

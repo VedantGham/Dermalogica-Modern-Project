@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="M7ur9u6vSEGeLCbBpZVnWw" Reference="mloyvZZYp0uchJWViZ6yLQ/NEV0U3azCE2OpmVes-tVYQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="EQ68Mxs2FUaStXbWB0mltg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK/SURBVFhHxZfPTxNBFMfxqv+PRz16wT+grXii3UrUdklraIyCiImCooJVgqBCjUZiNBrRqAf/ARMPBoVUE0MIEcWDeugW2z7f284yu7NvttslKd/kk86+efPmdefndh3Kdu8qrLGTsMYgenpy++JG5kAi3Z9MpMwBGyyTjeq4NkGwRhXUnphhHo4b5iJiJQwTOKiOfMiX2nCxVFijm3ja3J9IZd9zHQaCbagtF9MNa3SIpTJ5/Ef/2A5CQG3jRjbHxXZgjQQ2HOOCRoFicX0QrJH+ORdoJ+jehM9A4xbltfdmCzB+c9bDyJXidr09HMyc8D7gzI004ZDC+TFQ9W11zeuHsdXV4UmAlo+nQRuESgChPtx9ehKgNaw2UCkMj0JxpgSz9xfgBv4O4LNtD5kA9eHuc7vQ3OH0mwyN6fr3DRHaq9W1dZieeyiepDQJWKnU0F5fArHkiYOqs0Np4akIqVe9XhclKS4BgrZtXwL23s445wcvQq3mD06iTmu1mnjyS5dAIp1J+hOgQ4VxXnzzToSTqlgWTEzPwdG+HBxJ98O50QnY+LkpaqW0CWBfoRNYLn8V4aQeP3/l85vEhFS1lwC+Fs6Zgqi6euuOz+/0yGVRK9XWEOgm4aeVsggn9eTFa5/f1L0HolZKlwA7CXXL8NnLtyKcVLVahZnSIzh+ahCO5c7Atam78PvPX1ErxSWgXYYEbRJqg5OFYahubYmQ7UmTAL8REbqtePL2PLvO3apULFGS4hII3IqDDqOhS9fh88oXaDQaInxT9Ly0XLYn4Y/NXx4+fFzyxml1GBGtjmMa8wvjxeZxi799+bOsnwrFbHkcO9DlgQuyE0JfSBx29UrmQFkHDUcr7Nce9VLqQOMW6ZaEbbgxV2GNKjRzafnQGkY6+2GiIj/N8OygA4zAMtncO1xYWGMnYY2do7vrP1MyxfaMJ6X8AAAAAElFTkSuQmCC" Reference="mloyvZZYp0uchJWViZ6yLQ/NEV0U3azCE2OpmVes-tVYQ" Selector="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' /&gt;" Url="https://www.dermalogica.com/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="e1f466e33f63fba9104ae9cc23be2e09.jpg" xmlns="">0UmyGVYGMNk-yzxwS5lJBHg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

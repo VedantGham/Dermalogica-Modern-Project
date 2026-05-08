@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Click 'Close'",
+  "Type": "Element",
+  "Id": "3me9GSj3kEm0MWejVWRQ1g",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/3me9GSj3kEm0MWejVWRQ1g",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/bvUeqjpBvUqjm8DcUaKKAQ",
+  "Created": "2026-05-06T10:59:24.0364289Z",
+  "Updated": "2026-05-06T10:59:24.0364289Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

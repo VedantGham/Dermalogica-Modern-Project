@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Bm8zvwF-nUaoThOVMN-5_Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.in" DesignTimeRectangle="1346, 266, 562, 723" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='powerbright dark spot peel' tag='IMG' /&gt;" Guid="0d5f7d62-9231-4c53-a23d-18c7f9cd436d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Skin Care Products Online at Best Prices | Dermalogica India' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9a6b26b7fa74bb3461214f91abd5d6ee.jpg" xmlns="">0vL0p2-CJLUuEQcatJCWNpQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

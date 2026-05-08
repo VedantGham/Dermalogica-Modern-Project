@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Clear Cache Chrome Tab",
+  "Type": "Screen",
+  "Id": "jsUr2Iuuc0OvkTrlMwe-Eg",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/jsUr2Iuuc0OvkTrlMwe-Eg",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/EL-hbKMmKkqZfVyVzyKP7A",
+  "Created": "2026-05-06T10:16:54.6313722Z",
+  "Updated": "2026-05-06T10:54:32.2533901Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

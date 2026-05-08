@@ -1,0 +1,14 @@
+﻿{
+  "Name": "250ml",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "spdjRTgCoEWwmSZoydTcEQ",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/spdjRTgCoEWwmSZoydTcEQ",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw",
+  "Created": "2026-05-07T15:14:57.51012Z",
+  "Updated": "2026-05-07T15:14:57.51012Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

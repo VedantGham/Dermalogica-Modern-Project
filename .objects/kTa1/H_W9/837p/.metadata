@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Dermalogica Skin Care  Official – Derm",
+  "Type": "Screen",
+  "Id": "837p_l-XNUKZJPJRAP02XA",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/837p_l-XNUKZJPJRAP02XA",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/H_W9QIvOwkKXjfvrK92P_A",
+  "Created": "2026-05-07T12:16:11.8167617Z",
+  "Updated": "2026-05-07T12:16:11.8167617Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

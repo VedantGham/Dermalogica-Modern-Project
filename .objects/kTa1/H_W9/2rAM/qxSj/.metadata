@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get 15% Off",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "qxSj_SHK1kK5F9PZzIFuWw",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/qxSj_SHK1kK5F9PZzIFuWw",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw",
+  "Created": "2026-05-07T14:46:56.2235937Z",
+  "Updated": "2026-05-07T14:46:56.2235937Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

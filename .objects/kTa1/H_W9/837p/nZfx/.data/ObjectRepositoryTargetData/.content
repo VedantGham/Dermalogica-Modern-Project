@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uzI1_LE9_0mTSmk2Ke3TMw" Reference="mloyvZZYp0uchJWViZ6yLQ/nZfxlbXoAUy_8mMnVC27HA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk/products/daily-superfoliant" DesignTimeRectangle="1409, 921, 216, 69" ElementType="RadioButton" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='INPUT' type='radio' aria-label='&quot;+in_DermaProduct.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml' /&gt;&quot;]" Guid="b5d4b916-dc28-4e0b-80ca-17f1e504737d" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1178, 920, 218, 71" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" Guid="3c594874-6f66-4fca-b850-a69a32d698ed" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1bc573b089925bd6abd650a0405a7fe2.jpg" xmlns="">0GqT39yR0wE2-YGn3F6xSVg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

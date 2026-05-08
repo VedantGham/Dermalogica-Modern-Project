@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="smQ3SjHq_EucsEncCrd-xg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.in" DesignTimeRectangle="11, 141, 0, 0" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='circle' /&gt;" Guid="cdb6a9af-c68c-4c77-b801-13d425bfa18a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy Skin Care Products Online at Best Prices | Dermalogica India' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bXK8oAtS0UGVIa49VBgLzg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk" DesignTimeRectangle="1399, 794, 429, 87" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='CybotCookiebotDialogBodyButtonDecline' tag='BUTTON' /&gt;" Guid="bbc3c39a-006a-447c-acf4-37c8269d51c0" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='40637370' title='Beauty Flash - Home Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7348ab670cb25a6e27f8438b90f0f7de.jpg" xmlns="">0pYBa0nBRQkqXNKrvQ-Us8Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

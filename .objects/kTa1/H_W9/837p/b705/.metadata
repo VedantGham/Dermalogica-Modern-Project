@@ -1,0 +1,13 @@
+﻿{
+  "Name": "SHOP SHOP product type …",
+  "Type": "Element",
+  "Id": "b705JrWxGEqnQxzdw5JFwg",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/b705JrWxGEqnQxzdw5JFwg",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/837p_l-XNUKZJPJRAP02XA",
+  "Created": "2026-05-07T13:02:34.6957531Z",
+  "Updated": "2026-05-07T13:02:34.6957531Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

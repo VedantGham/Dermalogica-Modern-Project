@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Dermalogica Precleanse …",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "RIm6kXWJW0C2s0sACx865A",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/RIm6kXWJW0C2s0sACx865A",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/evUTPM52f0Ka8fKYNxbOWg",
+  "Created": "2026-05-08T13:38:57.8889878Z",
+  "Updated": "2026-05-08T13:38:57.8889878Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

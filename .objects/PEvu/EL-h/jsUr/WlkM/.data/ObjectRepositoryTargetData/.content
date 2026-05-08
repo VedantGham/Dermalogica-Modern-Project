@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sNjeTbOQkUuPyFJ9L1ancg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="settings/privacy" DesignTimeRectangle="1862, 11, 69, 60" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Settings - Privacy and security - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="ebe1bed3-8876-4812-9b54-6f94d59cd510" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Settings - Privacy and security - Google Chrome' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="35878c1c178489cd87124c250c327b0f.jpg" xmlns="">0YvZkWEDjKkCy5o34MFjccw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

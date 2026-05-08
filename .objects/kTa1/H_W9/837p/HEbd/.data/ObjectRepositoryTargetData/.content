@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="A4YWWD03ik2msJVzjb_WcA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk/products/special-cleansing-gel" DesignTimeRectangle="1000, 414, 91, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='price' tag='SPAN' aaname='*' visibleinnertext='*' /&gt;" Guid="11743f71-0c7a-46cd-8500-8192d708512f" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="8debd4de5cc53f546211034d2338c3cf.jpg" xmlns="">0mcj8Dh7FpEewdlgxOPcjdw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

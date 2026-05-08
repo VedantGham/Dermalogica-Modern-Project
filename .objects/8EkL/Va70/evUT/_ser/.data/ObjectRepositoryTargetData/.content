@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="7lGiWVgUnEiZ-zmPDLFjMw" Reference="mloyvZZYp0uchJWViZ6yLQ/_serYhqnBEyhVQccrOug3g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk/searchanise/result" DesignTimeRectangle="121, 559, 281, 58" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl class='snize-title' tag='SPAN' aaname='Dermalogica &quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString+&quot;*&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml' /&gt;&quot;]" Guid="f60e475e-ecf2-46df-ae96-001c9eaa6249" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.beautyflash.co.uk/searchanise/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9bc4533f5de44accd947800a213fdcbf.jpg" xmlns="">0wEG7KOObAkqvmxiH2kfb-g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

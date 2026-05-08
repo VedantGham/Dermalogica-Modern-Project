@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "PG7KHGsATEy2_8Lt-aerag",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/PG7KHGsATEy2_8Lt-aerag",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw",
+  "Created": "2026-05-07T14:52:39.5686728Z",
+  "Updated": "2026-05-07T14:52:39.5686728Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

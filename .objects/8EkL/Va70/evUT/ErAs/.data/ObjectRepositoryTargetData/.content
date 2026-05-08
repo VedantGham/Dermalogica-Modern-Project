@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RIT1r7mRck6Akx2SnD068w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk" DesignTimeRectangle="1011, 232, 375, 67" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='search' tag='INPUT' /&gt;" Guid="eb723185-b493-4960-8daf-780539f1ebd1" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='40637370' title='Beauty Flash - Home Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="bc46270495bb6a98a405e09d38e6886f.jpg" xmlns="">0LK2BijR_0kuyGGwpszaMZg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

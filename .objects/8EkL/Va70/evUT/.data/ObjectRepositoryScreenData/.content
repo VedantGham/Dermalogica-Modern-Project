@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="UM7J1WMTrkqQQjWGwgacDg" Reference="mloyvZZYp0uchJWViZ6yLQ/evUTPM52f0Ka8fKYNxbOWg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="_2v-pq_QA0S6Wmx1Hn8Zaw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFdSURBVDhPvdI/KIRxHMfxx7+6M1wuyR1HSdzFDcpCsrrhdF1ZUAZdZLBgsHGdpGQwU2RVBqVbDGSS0d+6gS5/NrMMerw/1++R9DuZfOpVT7/n+Xx7nt/vcf4199El8SFpVGvdjzGkUVqwxZRlAjnsIqB7jbjBKXxasMWU49hCPepQoXvfB7RhyGiCs908qmIlwtg0gigNVTTgCi+4xBvezXUyE+xzirFsDQ9P4g4r6FVZFA3Qwy6OoP1YwBMK6FgPpfRwGvvwe0UvGnBtRLRgMoMPzLquqwE7yKhsG3CLQ3w/hQHoc1Zfu9a6KR2j9WdZ8d5AG9miBRPvDaafY7lFihsqlxvg7UEe45jHIwqpQLy/GM3mKQ7aykoDdIRnuIB3Cvqs4Yfo8gjFA9SWG1AFnX8YIegfSCBy3j6n49vDlMrlBlhjCj04gXXzfo0Z0IkE9CeaO3+MGfDFHsf5BNGKqdMZbvPOAAAAAElFTkSuQmCC" Reference="mloyvZZYp0uchJWViZ6yLQ/evUTPM52f0Ka8fKYNxbOWg" Selector="&lt;html app='chrome.exe' title='Beauty Flash*' /&gt;" Url="https://www.beautyflash.co.uk/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="21f419f5aa108e7999e7e17723778cf2.jpg" xmlns="">0-CwCVTSTPECRJNK_6G_oqA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="mtr3frcijkas2_hKfGW-sQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="lookfantastic.com" DesignTimeRectangle="725, 313, 36, 36" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='search-bar-no-overlay' tag='svg' /&gt;" Guid="e76e532d-e92e-41ad-aa7f-235ee990e563" ScopeSelectorArgument="&lt;html app='chrome.exe' title='LOOKFANTASTIC - Beauty, Fragrances, Skincare &amp;amp; Haircare' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2dd4df7b819a63deaf36fb1833459e9f.jpg" xmlns="">0yZ5HQgzMZU2rg7zDl4mcOQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
