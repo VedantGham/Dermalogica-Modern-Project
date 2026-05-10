@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DTzWOisUDUWLUFe2sZ9PNw" Reference="mloyvZZYp0uchJWViZ6yLQ/kMlGy8zPZE2OGJ0YtUmf5Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="1838, 327, 50, 50" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='circle' class='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3b31896f-e3b5-44f8-8f02-53ed81fcfd27" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="1249, 613, 630, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Email' tag='INPUT' type='email' /&gt;" Guid="a7667d6d-4830-4373-a46f-aa2d8fb385d1" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="001df1cf9be04e08af47b09c34f23535.jpg" xmlns="">0L4t0DA8E9kSJJ9XUs1f8FA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

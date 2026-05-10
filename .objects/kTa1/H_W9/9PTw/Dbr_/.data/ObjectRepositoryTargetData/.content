@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="K5_H_0zDbkmMdF48kxiN5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr" DesignTimeRectangle="1493, 88, 36, 37" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Your online perfume shop notino.fr | Discover our selection - Go*' role='pane' /&gt;&lt;ctrl name='Translate' role='push button' /&gt;" Guid="2d493a97-6789-4bae-a54c-2364fb62972d" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e3982c1722c11e51b5a65497f60633b0.jpg" xmlns="">0duzFGEh-XkiCKUchGBhyJA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

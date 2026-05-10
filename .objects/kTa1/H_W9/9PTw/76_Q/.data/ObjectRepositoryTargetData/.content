@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gHCR3dkV_Emat73EDak2dA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr" DesignTimeRectangle="184, 18, 153, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translated' role='alert' /&gt;&lt;ctrl name='English' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;" Guid="c76380ce-c528-49c1-bc22-e34a6f577cec" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translated' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="27c3a3763c8ecb803154223a77caaf14.jpg" xmlns="">0CaEkze3ijUydo87jjqNzKg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

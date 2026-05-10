@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Kg5L2nI390qK22OyoWzg7A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/c/skinstore" DesignTimeRectangle="1303, 644, 187, 61" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='onetrust-accept-btn-handler' tag='BUTTON' aaname='*' /&gt;" Guid="c2e9ddce-534b-46aa-aa57-69e6685abdad" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Shop SkinStore Favorites Now at Dermstore | Dermstore' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3deef7137098744f69d7b0de5c3798c0.jpg" xmlns="">0PFmJmPLZw0KHbPO5M1NYnw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

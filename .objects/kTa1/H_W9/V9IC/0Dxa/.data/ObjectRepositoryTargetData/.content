@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dd4p6CBAB0uDMRgNvDGsrQ" Reference="mloyvZZYp0uchJWViZ6yLQ/0DxakBgyN0ynhrFbnTIUJQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr/products/lotion-hydratante-active-active-moist" DesignTimeRectangle="1117, 616, 144, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='LABEL' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot; ml' /&gt;&quot;]" Guid="e33cd774-aca4-4591-b0ef-93a039056278" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="72514808b2f643e8aafa72e560f0babf.jpg" xmlns="">0MPpKrc6ebUqXV_aOpQSFUA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

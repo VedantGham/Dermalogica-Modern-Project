@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Votre parfumerie en ligne notino.fr  d",
+  "Type": "Screen",
+  "Id": "9PTwGvPHcEyjzXOCvnRnKQ",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/9PTwGvPHcEyjzXOCvnRnKQ",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/H_W9QIvOwkKXjfvrK92P_A",
+  "Created": "2026-05-09T09:33:17.7652192Z",
+  "Updated": "2026-05-09T09:33:17.7652192Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

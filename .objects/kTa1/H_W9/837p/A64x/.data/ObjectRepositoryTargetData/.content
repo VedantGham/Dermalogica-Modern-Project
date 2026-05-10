@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="-hXLaIqKc0ecPfDbMxS8ew" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="O721JRQtwE22FaTqnWa6aA" Reference="mloyvZZYp0uchJWViZ6yLQ/A64xVqwUk0Ok8ciq0hhuFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk" DesignTimeRectangle="497, 385, 221, 387" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='predictive-search-products' tag='A' aaname='*' visibleinnertext='*' /&gt;" Guid="3f6d7f73-2842-40f3-ab05-53cdf61983fe" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="8e860c337e9a1556fa4d8c65c111b10a.jpg" xmlns="">0BjTg1F1eIUux0U84AmPkxA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk" DesignTimeRectangle="497, 385, 221, 387" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='predictive-search-products' tag='A' aaname='*' visibleinnertext='*' /&gt;" Guid="3f6d7f73-2842-40f3-ab05-53cdf61983fe" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="8e860c337e9a1556fa4d8c65c111b10a.jpg" xmlns="">03VMz6frm-UWCz_H74ZqBdg</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

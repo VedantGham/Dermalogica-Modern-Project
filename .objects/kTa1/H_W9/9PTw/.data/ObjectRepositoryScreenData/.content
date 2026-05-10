@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="ENM_pVDIZUaie3tLiwuBMg" Reference="mloyvZZYp0uchJWViZ6yLQ/9PTwGvPHcEyjzXOCvnRnKQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="aIkzq1dGh0OVUf6tWKtjSg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACjElEQVRYR8WXvaoaURSFVWKlFkGLWOQNtElauS8QKztDXiBpBR9ArPx9ijSCZdJb2iRgESQBCwlYprC6GNzZ39xzZH6OOMcrccECnVn77MXMPnufyXgir3ytfMjn8++LxeJHyG+umXtobo5Xyg/Kz8ofyj/Kx2w2+xfy21zjHhq0xDwbL5WflN+VB6WkJFpiiGWNq/BG+VXpkzhOYlmDtbzwTvlL6Vr0GrIWa6YCwt9K10LPIWteNPFW+VPpWuAWZG1yOEGxfFEmArXSJZfLJa5fSXI4C5OKTRRcoVCQfr8vs9lMer2e1Ov1wFBcB5vNpkwmExmPx9LpdIJYh44c5IqAPftNmQioVCqyWq3EYrPZSKvVSujgcDg0KgliiHXplOSK9Akah3O7lcvliAGw3W6l0WgktHEDxMY1huQiZ4AXSrqXS+g0ABaLhVSr1YjWwwAkJ7mD/k0LdYnOGgDT6VR0Dpy0ngbISe5giNDHXaKEgePxaH6J7Pd7abfbJ62nAXI+ZMwkY5i4RAkDy+VSdrud+SeyXq+lVqsFWk8Dj0FuxqmZaC5RwsBoNJJutyuHw8FcEZnP51IqlWQwGJgrlw2Qk9zeBkhCMpJaYAZTmLNIbcD3FfCYuc5j5/Fb8Fp4PRaXDCifXoHCqwitAUgBUogW4QJNYeCpCBVe2zBsgC3IVnQhhYHTNvRqRGEDkGZEU4ojhYFTIwKpW3HcAKQt057DuGAg0opB6mHkMgAZUAwqC2J8hhE4O44ZrYxYRi0jN66BjGhGNSOb0c0I9xnH4OyBxJccXjDkuqc8eyABdz2SWdz1UGqB8G7Hcou7fphYUCxU7F0+zcJgz9I46F60UPr4f/k4jePGn+eZzD/Q5pGdwk/L5wAAAABJRU5ErkJggg==" Reference="mloyvZZYp0uchJWViZ6yLQ/9PTwGvPHcEyjzXOCvnRnKQ" Selector="&lt;html app='chrome.exe' title='Votre parfumerie en ligne notino.fr | découvrez notre choix' /&gt;" Url="https://www.notino.fr/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="be902993eef7eb806bb8cc3af7183f0e.jpg" xmlns="">0Wu5IZW898U-zuEqga6Kn-w</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

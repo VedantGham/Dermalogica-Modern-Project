@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="omT8NrGnNUqeifdhCZfqLA" Reference="mloyvZZYp0uchJWViZ6yLQ/xyJjzkDAE0mgwe1ST18WvQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="1624, 260, 25, 25" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' href='#icon-search' tag='use' class='' aaname='               ' matching:href='fuzzy' fuzzylevel:href='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a8cd15b3-e053-4e2d-98eb-46d8b007a8e3" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1703, 256, 36, 36" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl aaname='   ' aria-role='presentation' type='' tag='svg' class='icon icon-account' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.7' matching:class='fuzzy' fuzzylevel:class='0.7' /&gt;" Guid="21451a61-c85c-46d6-8594-76e4db48808e" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="bb124de1265921721167a659676c6e7f.jpg" xmlns="">0GIt39KO7eUSyCEDfCfiZww</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

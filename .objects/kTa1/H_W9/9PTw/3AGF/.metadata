@@ -1,0 +1,13 @@
+﻿{
+  "Name": "50 ml€ 11.79",
+  "Type": "Element",
+  "Id": "3AGFL-eu2EqbvECwMvQtAw",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/3AGFL-eu2EqbvECwMvQtAw",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/9PTwGvPHcEyjzXOCvnRnKQ",
+  "Created": "2026-05-09T10:17:57.6622426Z",
+  "Updated": "2026-05-09T10:17:57.6622426Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

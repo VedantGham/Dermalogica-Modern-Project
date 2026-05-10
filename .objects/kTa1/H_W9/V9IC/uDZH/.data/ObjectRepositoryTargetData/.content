@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_fULXqL_tkGlC6Bw2vrXtA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="1873, 80, 59, 51" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Chrome' role='menu button' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;ctrl name='Chrome' role='menu button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Chrome' /&gt;" Guid="66d7b6a9-264a-46e6-bc2d-704c930abb2a" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Découvrez Dermalogica : le meilleur des soins visage - Google Ch*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d6d7593aec2a2fb2388753204c3af435.jpg" xmlns="">0tPLIL0tWSkiX2JdEEgdjqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

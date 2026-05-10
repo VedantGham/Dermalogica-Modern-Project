@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="c6xMay0jME-1JEdGmYP88Q" Reference="mloyvZZYp0uchJWViZ6yLQ/SoNmcX0TAEqlBqOpsWNCTA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr/search" DesignTimeRectangle="34, 18, 150, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='*' role='page tab' /&gt;" Guid="67882055-6fee-49d4-afe9-de5bd426bdc9" ScopeSelectorArgument="&lt;wnd app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d81044a3e63c533bd9dcde10be1029d4.jpg" xmlns="">0XlGmrqXm10eSNMfsNOY9aw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

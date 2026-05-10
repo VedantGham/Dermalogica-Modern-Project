@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tNwYPDLh60i6B8zzdM_ezA" Reference="mloyvZZYp0uchJWViZ6yLQ/rGFvAcuHO0Wbfiv6Rfcfsg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="397, 18, 42, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="87f6e93b-e689-4fa7-b068-1abb4c1e3e0c" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="673503fe473a2d81f3844a42a3af3833.jpg" xmlns="">0rsr7FjRDeEiPm6s8XqFeOQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tr9A0Bii4kiQoWjzzN4-vA" Reference="mloyvZZYp0uchJWViZ6yLQ/fOk2-8MixE2RYsXxYW4GmA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/search" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(3))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="cedaf33e-a56e-422c-abd3-aadafbed875f" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4a540873f4d67e603e7dee6da88e0c3b.jpg" xmlns="">0gDNntWkhv0qnNDOdvk4rJw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

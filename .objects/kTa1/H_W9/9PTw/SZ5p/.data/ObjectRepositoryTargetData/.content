@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hVNU3DdX9Ua1-IV28ANzoA" Reference="mloyvZZYp0uchJWViZ6yLQ/SZ5pJRpnn0-QXtt6MUBI0g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr/search.asp" DesignTimeRectangle="470, 783, 340, 36" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(2))+&quot;*' tag='H*' /&gt;&quot;]" Guid="b3c7d89e-59a1-4e48-95ea-e2fc88ffc338" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="83b31a4fac098d99dd6dd0460c574a08.jpg" xmlns="">03PJbltA2Nk60NC9V6sm6Lg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

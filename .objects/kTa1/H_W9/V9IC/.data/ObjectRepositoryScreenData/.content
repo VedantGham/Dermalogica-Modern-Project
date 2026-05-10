@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="ABrPKHNduEOSHkkEonX30w" Reference="mloyvZZYp0uchJWViZ6yLQ/V9ICkKDR2E-TraEJrirksw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="JuF0beUBqE--X5SITTfj4A" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABZ0lEQVRYR+2WYXHDMAxGA6EQCmEQBmEQBmEIcmEwCIVQCIUwCIUwCNv3XNddXDm1nKQ/dtHd66WSbH92LMfdZmtY3/cn8VPBEJssa+p4E/DPBChxJ14tYsrI5J8vQMG9+BTnmDzFl/gQu9i2XYCczPbwJ8nDt3gTbQLkeBF0YiV7qO3jJkB/lhrcw0WAHlj2mne9NEnAkAWeRRLQsvRsNIQDzy19DAzOrrWCJaiQUG65ye9dySDA0+gQxyqacjgPrLYWQcAxc05hzjw35dWXoX5qD41T7P+hkZu1LbEJCAI85/4+jlE05XCoWW0tggBPFRzjOEVTjmdCQQDfACtYguW9uwfIRz+eioJ0ErZ+BxBT+74tkoD3LPAsLgIw/Zkzk1ZGAti9XK2sxLW4CcDkQMTcleAYrq2EsYCrKcCeaNmYiKcauDFb8RxbwNWUwKea2Uy9GmLcnlNp6pmVvLvCGzw82Fa2rvsFjOB3t4p+Nj0AAAAASUVORK5CYII=" Reference="mloyvZZYp0uchJWViZ6yLQ/V9ICkKDR2E-TraEJrirksw" Selector="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" Url="https://dermalogica.fr/" Version="V3">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="45d3430b85298e6e2dd80790989f7678.jpg" xmlns="">0wao2Oe-HiEikAYVdBv4rcQ</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

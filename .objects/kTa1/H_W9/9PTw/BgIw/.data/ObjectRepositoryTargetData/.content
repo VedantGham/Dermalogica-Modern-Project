@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Mg8qJmVxwUGvHWX-hzoM2g" Reference="mloyvZZYp0uchJWViZ6yLQ/BgIwIiALXUyyLAbk7pxgMQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr/dermalogica/daily-skin-health-gel-moussant-purifiant-pour-tous-types-de-peau/p-488533" DesignTimeRectangle="1330, 630, 177, 84" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='DIV' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot; ml*' /&gt;&quot;]" Guid="63ffc90e-62b6-42c5-95fe-0dce5137967e" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3eb40ead911d1f8902acaed18788f208.jpg" xmlns="">0Pf1tyiErYkuMJR-yBhSltA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

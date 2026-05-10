@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sSqaxAQskEyhuHzyjhFpsA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/c/skinstore" DesignTimeRectangle="361, 603, 816, 293" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='onetrust-policy-text' tag='DIV' aaname='*' /&gt;" Guid="1780cd4b-9a2c-4b35-a765-292845e98df5" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/c/skinstore/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="39bf4e70fc925defebf499662506cd65.jpg" xmlns="">0VH0uOY6O-EukKa_7ZdVkeQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ODByR-NErkOK0wdKhBPHAQ" Reference="mloyvZZYp0uchJWViZ6yLQ/fB87sKnNr0qN51UF6SjV0g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="1192, 797, 420, 78" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' tag='BUTTON' /&gt;" Guid="8208572e-89fb-4f6a-9f20-2df0f2a4e903" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="458e270a2bb5bb5350a3c6a4e2777f60.jpg" xmlns="">0T8pTB4LDPkOHDS-f_Oa2CA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

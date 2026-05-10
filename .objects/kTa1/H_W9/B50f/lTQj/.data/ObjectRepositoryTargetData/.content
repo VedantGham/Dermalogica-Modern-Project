@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="WsYTWmvGfUuO_IivF-NxFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" DesignTimeRectangle="60, 174, 720, 66" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='search-input' tag='INPUT' /&gt;" Guid="1ef50859-e7e7-42b1-b1ca-b5e08e518b54" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Multi-Active Toner (8.4 oz.) | Dermstore' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6553ef6c2f72ecb2ac54c62c21fc84e2.jpg" xmlns="">0fCU3eluby0-e4rXTt-iJyg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

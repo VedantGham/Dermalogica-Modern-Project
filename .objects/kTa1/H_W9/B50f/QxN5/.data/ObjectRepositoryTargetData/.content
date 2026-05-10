@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="P0JCJKyx2UathD4uxRsBag" Reference="mloyvZZYp0uchJWViZ6yLQ/QxN5O0t_iEewoApeuW49Tw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" DesignTimeRectangle="1215, 701, 151, 84" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl parentid='size-wrapper' tag='BUTTON' type='button' aaname='*&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot;*' /&gt;&quot;]" Guid="86486c8f-7716-4194-89f3-947fe78ada58" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="395cf13a75743cb658407673c4419c2c.jpg" xmlns="">0NUO_oN13jE-cj3Rc4cQwnw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

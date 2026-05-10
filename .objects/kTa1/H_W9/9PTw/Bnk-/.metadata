@@ -1,0 +1,13 @@
+﻿{
+  "Name": "English",
+  "Type": "Element",
+  "Id": "Bnk-56P_rkSUsqz23WdJcQ",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/Bnk-56P_rkSUsqz23WdJcQ",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/9PTwGvPHcEyjzXOCvnRnKQ",
+  "Created": "2026-05-09T09:35:53.8377501Z",
+  "Updated": "2026-05-09T09:35:53.8377501Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

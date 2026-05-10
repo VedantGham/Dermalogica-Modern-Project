@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Piq2trPBwEaSDaCATtBguw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr" DesignTimeRectangle="621, 805, 678, 66" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='usercentrics-cmp-ui' tag='ASIDE' /&gt;&lt;webctrl id='accept' shadowhostid='usercentrics-cmp-ui' tag='BUTTON' aaname='*' /&gt;" Guid="ef595122-653a-4601-860d-7afd82134e34" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b60cd2365662aac8f87564751a2f0ce6.jpg" xmlns="">0yG6sd7FaCUiGHMTMV4_Crw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

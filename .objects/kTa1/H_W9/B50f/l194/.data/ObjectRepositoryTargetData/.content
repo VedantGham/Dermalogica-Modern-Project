@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6JhyZ1rjo06Hw2YkoKXecA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/search" DesignTimeRectangle="726, 189, 36, 36" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='search-bar-no-overlay' tag='svg' /&gt;" Guid="0a7f5386-c468-46f6-bc34-8b6972cf7cb8" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5453d63a9ef1bf7d602e471de845f429.jpg" xmlns="">0Uv_5x3PJWkqKMvCFepiFaQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

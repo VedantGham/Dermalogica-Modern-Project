@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eyhpDTwZ_0KJ9-ROMUs1FQ" Reference="mloyvZZYp0uchJWViZ6yLQ/DQaXCXISWUmDetRg81JarQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr/search.asp" DesignTimeRectangle="479, 882, 322, 65" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(2))+&quot;*' parentid='productListWrapper' tag='FONT' /&gt;&quot;]" Guid="373896e4-5cfc-4c19-bd1a-57d1fb88747f" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="99caea511476eaec3fc32f1d0ac8372f.jpg" xmlns="">0Kz1rRIhNzU2NvdSC2k7rag</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

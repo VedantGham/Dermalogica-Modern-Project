@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="U2oczL4_9k6G2z6AKBuXpA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="36, 725, 501, 43" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;ctrl name='Translate…' role='menu item' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Translate…' /&gt;" Guid="096b69c7-461d-4010-bfd9-719308bf2d09" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0f934dc483db942a881f97a57a4d4782.jpg" xmlns="">0E8irbcX6M0CTJxp1Y4U9Yw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

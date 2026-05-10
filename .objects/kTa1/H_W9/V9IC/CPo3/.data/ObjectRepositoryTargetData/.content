@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IwxXPUvNTkKt4Ejtpi4wTw" Reference="mloyvZZYp0uchJWViZ6yLQ/CPo3hx2R8k-MZo-h0sp0Bw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="542, 278, 858, 81" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' type='search' class='search__input field__input' placeholder='Research' aaname='*' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="47520a64-81ec-4250-9527-77adc8fefa9b" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="578, 296, 132, 43" ElementType="Text" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl class='field__label' type='' tag='LABEL' aaname='' matching:class='fuzzy' fuzzylevel:class='0.7' matching:aaname='fuzzy' fuzzylevel:aaname='0.7' check:innerText='Research' /&gt;" Guid="c0d69196-ad31-4736-ba5a-e150a4d7d1f3" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="39b826a2fa26209ad42bc3969d37d9dd.jpg" xmlns="">03NkvpjekqU2ckhyC3nWLeg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

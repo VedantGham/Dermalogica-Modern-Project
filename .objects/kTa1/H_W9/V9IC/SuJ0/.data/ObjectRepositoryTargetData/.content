@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SFaAl6HmEkK_ul9g_LM7qA" Reference="mloyvZZYp0uchJWViZ6yLQ/SuJ0NvOcK0-JC7oz3Jj-EQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr/search" DesignTimeRectangle="659, 758, 222, 84" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl id='CardLink--*' tag='A' aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Split(&quot; &quot;c).Take(2))+&quot;*' /&gt;&quot;]" Guid="11c78b71-0ca9-4445-b1f6-bb23e145eb16" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4795b2a2d81433d047a8a1086c0d33f7.jpg" xmlns="">0Dc134UUqvEOGkXaqteLxEg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

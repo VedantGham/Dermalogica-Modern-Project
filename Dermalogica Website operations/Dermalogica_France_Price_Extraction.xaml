@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Dermalogica_France" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Dermalogica_France" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_dt_ProductReport" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_Product" Type="InArgument(ui:QueueItem)" />
@@ -47,6 +47,10 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,16 +113,12 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Extracts price from Dermalogica France website" DisplayName="Dermalogica_France" sap:VirtualizedContainerService.HintSize="706,8596" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Extracts price from Dermalogica France website" DisplayName="Dermalogica_France" sap:VirtualizedContainerService.HintSize="644,10994.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="bool_LanguageSettingExists" />
-      <Variable x:TypeArguments="x:Boolean" Name="bool_AdPopUpExists" />
-      <Variable x:TypeArguments="x:String" Name="str_ProductPrice" />
-      <Variable x:TypeArguments="x:Boolean" Name="bool_VolumeExists" />
-      <Variable x:TypeArguments="x:String" Name="str_ProductException" />
-      <Variable x:TypeArguments="x:String" Name="str_ProductName" />
+      <Variable x:TypeArguments="x:String" Name="str_DermalogicaFrancePrice" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,736 +126,442 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Logs the beginning of Dermalogica France price extraction" sap:VirtualizedContainerService.HintSize="592,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Dermalogica France Price Extraction begins&quot;]" />
-    <TryCatch DisplayName="Try Extracting price from Dermalogica France website" sap:VirtualizedContainerService.HintSize="592,8366" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:LogMessage DisplayName="Logs the beginning of Dermalogica France price extraction" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Dermalogica France Price Extraction begins&quot;]" />
+    <TryCatch DisplayName="Try Extracting price from Dermalogica France website" sap:VirtualizedContainerService.HintSize="524,10764.666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="590,7700" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,10098.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Chrome browser" sap:VirtualizedContainerService.HintSize="556,7640" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="41e5772032a2e19971173a16138d802b" Selector="&lt;html app='chrome.exe' title='Google' /&gt;">
-            <ui:BrowserScope.Body>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Découvrez Dermalogica  le meilleur des" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,10038.666666666666" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Extract Price" sap:VirtualizedContainerService.HintSize="522,7430" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Boolean" Name="bool_IndiaPopUpExists" />
-                    <Variable x:TypeArguments="x:Boolean" Name="bool_SecondLanguageSettingExists" />
-                    <Variable x:TypeArguments="x:Boolean" Name="bool_ProductExists" />
-                  </Sequence.Variables>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,9844" sap2010:WorkflowViewState.IdRef="Sequence_22">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate to Dermalogica URL from configuration" sap:VirtualizedContainerService.HintSize="488,119.33333333333333" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_Config(&quot;DermalogicaFrance&quot;).ToString]" />
-                  <Assign DisplayName="Assign product name from input" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[str_ProductName]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[in_Product.SpecificContent("Product Name").ToString]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:UiElementExists DisplayName="Check for the presence of a language setting popup" Exists="[bool_LanguageSettingExists]" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f0222d41-4804-44ed-a384-535a262a7800" InformativeScreenshot="f8c0efcd89453738c8852d5b994633a8" Selector="&lt;wnd app='chrome.exe'  /&gt;&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl  role='pane' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                  </ui:UiElementExists>
-                  <If Condition="[bool_LanguageSettingExists]" DisplayName="Sets English language and handles ad and cookie consent pop-ups." sap:VirtualizedContainerService.HintSize="488,2749.3333333333335" sap2010:WorkflowViewState.IdRef="If_1">
-                    <If.Then>
-                      <Sequence DisplayName="Handle initial pop-ups and cookie consent for Dermalogica." sap:VirtualizedContainerService.HintSize="486,1165.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <uix:NCheckState DisplayName="Check App State 'French'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,880.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,441.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click English option" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4c183317-b687-4ad1-8f81-43b2c14ba622" InformativeScreenshot="c3b8e63aa5a1083c2d62e7347561ec89" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translate this page?' /&gt;&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='French' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:UiElementExists DisplayName="Check for Dermalogica france pop up of a UI element" Exists="[bool_AdPopUpExists]" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                          <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc4d3f95-a49c-4f8a-add0-469d23d2d5af" InformativeScreenshot="34b46551dbd2efd7947226b403c844f7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span&amp;gt;span&amp;gt;font&amp;gt;font' isleaf='1' tag='FONT' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:UiElementExists.Target>
-                        </ui:UiElementExists>
-                        <If Condition="[bool_AdPopUpExists]" DisplayName="Handles ad and cookie pop-ups, or logs their non-existence." sap:VirtualizedContainerService.HintSize="452,826.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
-                          <If.Then>
-                            <Sequence DisplayName="Handle initial website interaction and cookie consent" sap:VirtualizedContainerService.HintSize="450,468.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:Boolean" Name="bool_CookieOption" />
-                              </Sequence.Variables>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click a specific 'circle' UI element" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3645fd2b-5855-4ca1-9a0b-71d41bc29c82" InformativeScreenshot="4c6c992b5d4e7f245c89e5326ccac460" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;circle' tag='circle' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <ui:UiElementExists DisplayName="Check for cookie consent dialog existence" Exists="[bool_CookieOption]" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
-                                <ui:UiElementExists.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1eef2df5-ff09-43f4-ac9d-c5fe7b09e029" InformativeScreenshot="e8d7c2bf9ba01a95f984f6dccc9446eb" Selector="&lt;webctrl id='CybotCookiebotDialogBodyContent' tag='DIV' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:UiElementExists.Target>
-                              </ui:UiElementExists>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cookie consent button" sap:VirtualizedContainerService.HintSize="416,130" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1745bcc-396f-47ca-8228-9f504d56dc9c" InformativeScreenshot="6694345af254cc020d69eeefa508ddf6" Selector="&lt;webctrl id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' tag='BUTTON' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log message about ad pop-up status" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ad Pop up did not exist&quot;]" />
-                            </Sequence>
-                          </If.Else>
-                        </If>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'English'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="kEgVGxUUbU2NDRccSOtOpA" DesignTimeRectangle="184, 18, 153, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='French' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;" Guid="f2a40b25-45d3-47b6-a227-e8fa55d44783" InformativeScreenshot="fff338b684dae6f13c2cabfd3bd7837c.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/Y1yp7r1HdE6v3GBek7pZ2g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="tNwYPDLh60i6B8zzdM_ezA" DesignTimeRectangle="397, 18, 42, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="87f6e93b-e689-4fa7-b068-1abb4c1e3e0c" InformativeScreenshot="673503fe473a2d81f3844a42a3af3833.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/rGFvAcuHO0Wbfiv6Rfcfsg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
                       </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,1444" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click options button" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b079bc02-b740-45ba-ac2b-af4c538a70d8" InformativeScreenshot="5976c868c7c9afb7baf1406883187fe2" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Découvrez Dermalogica : le meilleur des soins visage - Google Ch*' /&gt;&lt;ctrl name='Découvrez Dermalogica : le meilleur des soins visage - Google Ch*' role='pane' /&gt;&lt;ctrl name='Chrome' role='menu button' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Translate option" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="54a95374-8921-4002-8215-a5fb35dc6a18" InformativeScreenshot="5faa5e36dbffcf6f8d51b629b8b861cc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;&lt;ctrl name='Translate…' role='menu item' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click English Option" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39d46623-4b4b-4120-83c3-bf9fc7cc8d33" InformativeScreenshot="d5c9f08aa8e98ef0c0928c7ecbfb182f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='English' role='page tab' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:UiElementExists DisplayName="Check if a specific UI element exists" Exists="[bool_AdPopUpExists]" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
-                          <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dc4d3f95-a49c-4f8a-add0-469d23d2d5af" InformativeScreenshot="34b46551dbd2efd7947226b403c844f7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p&amp;gt;span&amp;gt;span&amp;gt;font&amp;gt;font' isleaf='1' tag='FONT' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:UiElementExists.Target>
-                        </ui:UiElementExists>
-                        <If Condition="[bool_AdPopUpExists]" DisplayName="Handles ad and cookie pop-ups, or logs their absence." sap:VirtualizedContainerService.HintSize="452,826.6666666666666" sap2010:WorkflowViewState.IdRef="If_4">
-                          <If.Then>
-                            <Sequence DisplayName="Handle cookie consent dialog on webpage" sap:VirtualizedContainerService.HintSize="450,468.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                              <Sequence.Variables>
-                                <Variable x:TypeArguments="x:Boolean" Name="bool_CookieOption" />
-                              </Sequence.Variables>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click close button on pop up" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3645fd2b-5855-4ca1-9a0b-71d41bc29c82" InformativeScreenshot="4c6c992b5d4e7f245c89e5326ccac460" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;circle' tag='circle' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <ui:UiElementExists DisplayName="Check if Cookie info pop up element exists" Exists="[bool_CookieOption]" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
-                                <ui:UiElementExists.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1eef2df5-ff09-43f4-ac9d-c5fe7b09e029" InformativeScreenshot="e8d7c2bf9ba01a95f984f6dccc9446eb" Selector="&lt;webctrl id='CybotCookiebotDialogBodyContent' tag='DIV' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:UiElementExists.Target>
-                              </ui:UiElementExists>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click the 'Allow All' cookie consent button" sap:VirtualizedContainerService.HintSize="416,130" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f1745bcc-396f-47ca-8228-9f504d56dc9c" InformativeScreenshot="6694345af254cc020d69eeefa508ddf6" Selector="&lt;webctrl id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' tag='BUTTON' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence DisplayName="Log status of ad pop-up existence" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log status of ad pop-up existence" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Ad Pop up did not exist&quot;]" />
-                            </Sequence>
-                          </If.Else>
-                        </If>
                       </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:UiElementExists DisplayName="Check for existence of a specific DIV element" Exists="[bool_IndiaPopUpExists]" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6668c584-02ab-43f5-861b-85f41a8f29d9" InformativeScreenshot="31e2f1d097faebb1cfbfdd0002edd5a6" Selector="&lt;webctrl class='spicegems_cr_modal-body' parentid='sg_country_redirect_mod' tag='DIV' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                  </ui:UiElementExists>
-                  <If Condition="[bool_IndiaPopUpExists]" DisplayName="If India Pop up exists" sap:VirtualizedContainerService.HintSize="488,557.3333333333334" sap2010:WorkflowViewState.IdRef="If_3">
-                    <If.Then>
-                      <Sequence DisplayName="Click 'No' button on web page" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="7x7-RUcLlE-UPDf4H0b3TA" DesignTimeRectangle="34, 18, 150, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='French' role='page tab list' /&gt;&lt;ctrl name='French' role='page tab' /&gt;" Guid="d9c013e6-afae-4dd6-b235-5b06ad804623" InformativeScreenshot="110bdd932e5a545c4947a03054dc081c.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/WQ5wqFMJyU6inc1vrBqGLw" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'votre peau va adorer'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1466.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Timeout="15" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1027.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click No button" sap:VirtualizedContainerService.HintSize="416,130" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4ec0fa0-fc2c-4f4a-be34-c4b65d8b5ff5" InformativeScreenshot="2ba6fd069a4ef3a8e23e9cd0f4857965" Selector="&lt;webctrl id='spicegems_cr_btn_no' tag='A' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Chrome'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="_fULXqL_tkGlC6Bw2vrXtA" DesignTimeRectangle="1873, 80, 59, 51" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Chrome' role='menu button' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;ctrl name='Chrome' role='menu button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Chrome' /&gt;" Guid="66d7b6a9-264a-46e6-bc2d-704c930abb2a" InformativeScreenshot="d6d7593aec2a2fb2388753204c3af435.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/uDZHFYIpNEO5AY39pzkljA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Découvrez Dermalogica : le meilleur des soins visage - Google Ch*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Translate…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="U2oczL4_9k6G2z6AKBuXpA" DesignTimeRectangle="36, 725, 501, 43" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;ctrl name='Translate…' role='menu item' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Translate…' /&gt;" Guid="096b69c7-461d-4010-bfd9-719308bf2d09" InformativeScreenshot="0f934dc483db942a881f97a57a4d4782.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/sTlzRc-Ik0mw8cxTkS88QA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'English(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="oG5Cyp5Qd0OBdFnqzBO4xg" DesignTimeRectangle="267, 18, 125, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;" Guid="0270b364-0edc-4849-99a2-d063e10fef1e" InformativeScreenshot="f2858a1739c83add9dc8f23ee0ebe179.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/-uub1EBSIE-mIlONXiYI3g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translate this page?' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="9u1X7UNzL0WjfLbM4zFRSg" DesignTimeRectangle="397, 18, 42, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='*' role='alert' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="ef7d2e30-d488-4282-8e19-2439e5a0c3ff" InformativeScreenshot="3345c842c0c32a0b4ea48ac8ce34a868.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jhiz4dfDZEaheQlwTwb_0Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translated' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2 best-sellers OFFERTS'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="DTzWOisUDUWLUFe2sZ9PNw" DesignTimeRectangle="1838, 327, 50, 50" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' tag='circle' class='' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3b31896f-e3b5-44f8-8f02-53ed81fcfd27" InformativeScreenshot="001df1cf9be04e08af47b09c34f23535.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/kMlGy8zPZE2OGJ0YtUmf5Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1249, 613, 630, 75" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-label='Email' tag='INPUT' type='email' /&gt;" Guid="a7667d6d-4830-4373-a46f-aa2d8fb385d1" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
                       </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Log message if India Pop Up did not appear" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message about India Pop Up not appearing" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;India Pop Up did not appear&quot;]" />
                       </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click the search icon on the webpage" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2d87f07-4c38-447c-b8c5-e82120db93b3" InformativeScreenshot="dada777242877066940c5dcf0d515488" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;sticky-header&amp;gt;header&amp;gt;div&amp;gt;details-modal&amp;gt;details&amp;gt;summary&amp;gt;span&amp;gt;svg&amp;gt;use' href='#icon-search' tag='use' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Type product name into search field" sap:VirtualizedContainerService.HintSize="488,189.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[in_Product.SpecificContent(&quot;Product Name&quot;).ToString]">
-                    <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53959408-027a-4027-920c-95be0e6be220" InformativeScreenshot="3ee8bfa4fd180827e0fed8741d96d70b" Selector="&lt;webctrl id='Search-In-Modal' tag='INPUT' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeInto.Target>
-                  </ui:TypeInto>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click search button on web page" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c9a3cd2-864d-4ba2-9f84-b2e35ffd2867" InformativeScreenshot="7629c8662c13f25a17cacb688357f882" Selector="&lt;webctrl aria-label='Research' tag='BUTTON' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:UiElementExists DisplayName="Check for existence of a UI element" Exists="[bool_SecondLanguageSettingExists]" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ded13663-0c15-4f44-9351-5c6a3927a89b" InformativeScreenshot="90d7435597b90d3e1293d6a69ac32a8e" Selector="&lt;wnd app='chrome.exe' /&gt;&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl  role='pane' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                  </ui:UiElementExists>
-                  <If Condition="[bool_SecondLanguageSettingExists]" DisplayName="Handle language translation for price monitoring." sap:VirtualizedContainerService.HintSize="488,798.6666666666666" sap2010:WorkflowViewState.IdRef="If_5">
-                    <If.Then>
-                      <Sequence DisplayName="Click English option in translation prompt" sap:VirtualizedContainerService.HintSize="450,190" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="WrFXN1nDGEiKo5YfjCTaOQ" DesignTimeRectangle="1364, 430, 399, 54" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='votre peau va adorer' tag='SPAN' /&gt;" Guid="b50c6de1-5e82-41cc-a178-553ffce58ad5" InformativeScreenshot="1a297b4a73edd8f71ffaec94d6650073.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/ijWRriTaCUOQAG9NJdAuZA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Accept All'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_27">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click English option in translation prompt" sap:VirtualizedContainerService.HintSize="416,130" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9bf35cd-bb73-40fd-806b-e93cc3905270" InformativeScreenshot="c3b8e63aa5a1083c2d62e7347561ec89" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translate this page?' /&gt;&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl omit:name='French' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Accept All(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="Mt_XKRS5QEuKnjQr4m946A" DesignTimeRectangle="1192, 797, 420, 78" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' tag='BUTTON' /&gt;" Guid="517db03b-0bb1-4aeb-9a15-28286de582bd" InformativeScreenshot="7caedd9267ad25ad3b5541763c855366.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/q5u1UgkfrUay5nOQlVEYnw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
                       </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,468.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click menu option on chrome" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f01e49a3-4ca5-47a2-a60a-66228d79c035" InformativeScreenshot="4c09dfb0fa791408083d60ccbb37b435" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*' /&gt;&lt;ctrl name='*' role='pane' /&gt;&lt;ctrl name='Chrome' role='menu button' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Translate option on chrome" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="00d49b74-fdbc-4cdb-87b9-394e4ab476eb" InformativeScreenshot="fdf61c57647f99bff6df8086ad2b1b5e" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;&lt;ctrl name='Translate…' role='menu item' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click the English language option on chrome" sap:VirtualizedContainerService.HintSize="416,130" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="56dc2642-5ff0-4f57-b3e7-76e7e6e4073f" InformativeScreenshot="1d5d209e2ae3b7cb34607710ebf295f4" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translate this page?' /&gt;&lt;ctrl name='*' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
                       </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:UiElementExists DisplayName="Check if a UI element exists on the screen" Exists="[bool_ProductExists]" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
-                    <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b2b06436-4625-4d00-ad28-e1422153d90d" InformativeScreenshot="299c5c8384aecd5df7549ebff8597c8c" Selector="[&quot;&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;&lt;webctrl parentid='CardLink--*' tag='STRONG' aaname='*&quot;+str_ProductName.ToLower.Join(&quot; &quot;,str_ProductName.ToLower.Split(&quot; &quot;c).Take(2))+&quot;*' /&gt;&quot;]">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:UiElementExists.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:UiElementExists>
-                  <If Condition="[bool_ProductExists]" DisplayName="Monitor Dermalogica product prices and log them." sap:VirtualizedContainerService.HintSize="488,1833.3333333333333" sap2010:WorkflowViewState.IdRef="If_6">
-                    <If.Then>
-                      <Sequence DisplayName="Monitor Dermalogica product prices and log them" sap:VirtualizedContainerService.HintSize="486,1466" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="ODByR-NErkOK0wdKhBPHAQ" DesignTimeRectangle="1192, 797, 420, 78" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll' tag='BUTTON' /&gt;" Guid="8208572e-89fb-4f6a-9f20-2df0f2a4e903" InformativeScreenshot="458e270a2bb5bb5350a3c6a4e2777f60.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/fB87sKnNr0qN51UF6SjV0g" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Would you like to visit…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_29">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click product image based on name" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf7d54fe-b9f1-4cc6-94c5-22c42d9a76f0" InformativeScreenshot="299c5c8384aecd5df7549ebff8597c8c" Selector="[&quot;&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;&lt;webctrl parentid='CardLink--*' tag='STRONG' aaname='*&quot;+str_ProductName.ToLower.Join(&quot; &quot;,str_ProductName.ToLower.Split(&quot; &quot;c).Take(2))+&quot;*' /&gt;&quot;]">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:UiElementExists DisplayName="Check if product volume label exists" Exists="[bool_VolumeExists]" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
-                          <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52e41e1f-2d8c-4215-988d-e96c6e61e1d6" InformativeScreenshot="9d68b38f90e38a456ec6f04710a43f93" Selector="[&quot;&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='LABEL' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;ml&quot;).ToString+&quot; ml' /&gt;&quot;]">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:UiElementExists.Target>
-                        </ui:UiElementExists>
-                        <If Condition="[bool_VolumeExists]" DisplayName="Monitor Dermalogica product prices" sap:VirtualizedContainerService.HintSize="452,1127.3333333333333" sap2010:WorkflowViewState.IdRef="If_7">
-                          <If.Then>
-                            <Sequence DisplayName="Monitor Dermalogica product prices" sap:VirtualizedContainerService.HintSize="450,630" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click a label element based on product content" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be1ada64-9f7e-4f8d-b207-5c5455568d3a" InformativeScreenshot="c3850ef02465a395ee61d9e02948a84c" Selector="[&quot;&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='LABEL' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;ml&quot;).ToString+&quot; ml' /&gt;&quot;]">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <Delay DisplayName="Delay workflow execution" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get product price from Dermalogica website." sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_1">
-                                <ui:GetValue.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f643629-cdcf-4424-a41a-b7b75b448ef7" InformativeScreenshot="02fc54a965b426bd849f075ee7d4de8c" Selector="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;&lt;webctrl parentid='yotpo-pdp-stars' tag='svg' /&gt;&lt;nav up='9' /&gt;&lt;webctrl aaname='*??.??*' tag='SPAN' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:GetValue.Target>
-                                <ui:GetValue.Value>
-                                  <OutArgument x:TypeArguments="x:String">[str_ProductPrice]</OutArgument>
-                                </ui:GetValue.Value>
-                              </ui:GetValue>
-                              <ui:LogMessage DisplayName="Logs the name and price of a product" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;The price of &quot; + in_Product.SpecificContent(&quot;Product Name&quot;).ToString + &quot;is: &quot; + str_ProductPrice]" />
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence DisplayName="Get product price from Dermalogica website and log it" sap:VirtualizedContainerService.HintSize="450,366.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get product price from Dermalogica website" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="GetValue_2">
-                                <ui:GetValue.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f643629-cdcf-4424-a41a-b7b75b448ef7" InformativeScreenshot="02fc54a965b426bd849f075ee7d4de8c" Selector="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;&lt;webctrl parentid='yotpo-pdp-stars' tag='svg' /&gt;&lt;nav up='9' /&gt;&lt;webctrl aaname='*??.??*' tag='SPAN' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:GetValue.Target>
-                                <ui:GetValue.Value>
-                                  <OutArgument x:TypeArguments="x:String">[str_ProductPrice]</OutArgument>
-                                </ui:GetValue.Value>
-                              </ui:GetValue>
-                              <ui:LogMessage DisplayName="Log product name and price" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;The price of &quot; + in_Product.SpecificContent(&quot;Product Name&quot;).ToString + &quot;is: &quot; + str_ProductPrice]" />
-                            </Sequence>
-                          </If.Else>
-                        </If>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="sv3ypeWff0KdAYU6ka_V4A" DesignTimeRectangle="967, 450, 150, 60" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='spicegems_cr_btn_no' tag='A' /&gt;" Guid="91c48556-cc4a-4098-8387-ea6b65b67894" InformativeScreenshot="52037bee6f067c50173c0474d1ac4987.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/wEE__ES_OUyrUwxzD8ECMg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
                       </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Assign business exception to product exception variable" sap:VirtualizedContainerService.HintSize="486,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_30">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Assign 'Business Exception' to product exception variable" sap:VirtualizedContainerService.HintSize="452,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_1">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[str_ProductException]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">["Business Exception"]</InArgument>
-                          </Assign.Value>
-                        </Assign>
                       </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate to the specified URL" sap:VirtualizedContainerService.HintSize="488,110" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[in_Config(&quot;StartBrowser&quot;).ToString]" />
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="Vqa2DpjQuU-tlS4_MX-4qw" DesignTimeRectangle="659, 342, 601, 44" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='spicegems_cr_mod_msg' tag='MSG' aaname='*' /&gt;" Guid="8fd172d1-d58c-477b-ba04-450c80e1e4b8" InformativeScreenshot="b55e029190576f299d4a2976a8e6d13b.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/rD3qO0wFC0utL2phtcWT5Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'svg'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'use #icon-search'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="omT8NrGnNUqeifdhCZfqLA" DesignTimeRectangle="1624, 260, 25, 25" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' href='#icon-search' tag='use' class='' aaname='               ' matching:href='fuzzy' fuzzylevel:href='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a8cd15b3-e053-4e2d-98eb-46d8b007a8e3" InformativeScreenshot="bb124de1265921721167a659676c6e7f.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/xyJjzkDAE0mgwe1ST18WvQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="1703, 256, 36, 36" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl aaname='   ' aria-role='presentation' type='' tag='svg' class='icon icon-account' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.7' matching:class='fuzzy' fuzzylevel:class='0.7' /&gt;" Guid="21451a61-c85c-46d6-8594-76e4db48808e" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="foGiixB7bU6ZXBbaQXmplw" DesignTimeRectangle="1624, 256, 36, 36" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' type='' tag='svg' class='modal__toggle-open icon icon-search' aaname='                 ' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e4e1021f-d940-4b94-a8bb-f1b975df2cf2" InformativeScreenshot="0b816465505750266619eb134975b483.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/pTFfmDAZEU65Eu_B28Uucw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1703, 256, 36, 36" ElementType="Icon" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl aaname='   ' aria-role='presentation' type='' tag='svg' class='icon icon-account' matching:aaname='fuzzy' fuzzylevel:aaname='0.7' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.7' matching:class='fuzzy' fuzzylevel:class='0.7' /&gt;" Guid="9c979204-5a41-444f-92d5-6e6c40c8f6ee" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Research'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,933.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,494" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Research'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Text="[in_Product.SpecificContent(&quot;Product&quot;).ToString]" Version="V5">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="IwxXPUvNTkKt4Ejtpi4wTw" DesignTimeRectangle="542, 278, 858, 81" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' type='search' class='search__input field__input' placeholder='Research' aaname='*' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="47520a64-81ec-4250-9527-77adc8fefa9b" InformativeScreenshot="39b826a2fa26209ad42bc3969d37d9dd.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/CPo3hx2R8k-MZo-h0sp0Bw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="578, 296, 132, 43" ElementType="Text" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl class='field__label' type='' tag='LABEL' aaname='' matching:class='fuzzy' fuzzylevel:class='0.7' matching:aaname='fuzzy' fuzzylevel:aaname='0.7' check:innerText='Research' /&gt;" Guid="c0d69196-ad31-4736-ba5a-e150a4d7d1f3" SearchSteps="FuzzySelector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="seKIL6urOUyxIO2Ux2OIGQ" DesignTimeRectangle="1321, 278, 79, 79" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Research' tag='BUTTON' /&gt;" Guid="36e43881-6e14-426d-8532-2b7ee452ee4d" InformativeScreenshot="9a20dd20bc49ad6a86084428faa5e5c1.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/oXmKX62zxU2E_WPoLn1rmw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="X5i8XaJHi0yAsURl5dPHKg" DesignTimeRectangle="542, 278, 858, 81" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' type='search' class='search__input field__input' placeholder='*' aaname='*' matching:id='fuzzy' fuzzylevel:id='0.7' matching:class='fuzzy' fuzzylevel:class='0.7' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3048ed7a-f02e-4c67-a32f-ff511c5c3b62" InformativeScreenshot="a910c465c0e5b5fd66da88b3e5c06d7b.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/y4DDxLNecUqleLpbJX8N-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Découvrez Dermalogica : le meilleur des soins visage' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'French(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,880.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,441.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'English(2)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="pU1ATpMnZEu3tAr2_-hbJA" DesignTimeRectangle="184, 18, 153, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;" Guid="247e5193-5f48-4333-aff8-db8523743be5" InformativeScreenshot="6817d7222b68c44ed6c980c531c4e8ae.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/tAbOS2l_jUScSv6c0YezBA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close(2)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="qctUQ5e7HkSQKxQZuDwLiw" DesignTimeRectangle="397, 18, 42, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translated' role='alert' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="6bde2598-dbb0-4352-b438-522827dd57c8" InformativeScreenshot="2a5a6a655905bddca3a468decbc3bc3a.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/8SC13_mLO0uvabAbEcRMfQ" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="c6xMay0jME-1JEdGmYP88Q" DesignTimeRectangle="34, 18, 150, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='*' role='page tab' /&gt;" Guid="67882055-6fee-49d4-afe9-de5bd426bdc9" InformativeScreenshot="d81044a3e63c533bd9dcde10be1029d4.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/SoNmcX0TAEqlBqOpsWNCTA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'Résultats de la recherc…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1271.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,832" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Chrome'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="_fULXqL_tkGlC6Bw2vrXtA" DesignTimeRectangle="1873, 80, 59, 51" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Chrome' role='menu button' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;ctrl name='Chrome' role='menu button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Chrome' /&gt;" Guid="66d7b6a9-264a-46e6-bc2d-704c930abb2a" InformativeScreenshot="d6d7593aec2a2fb2388753204c3af435.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/uDZHFYIpNEO5AY39pzkljA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Découvrez Dermalogica : le meilleur des soins visage - Google Ch*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Translate…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="U2oczL4_9k6G2z6AKBuXpA" DesignTimeRectangle="36, 725, 501, 43" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;ctrl name='Translate…' role='menu item' automationid='' matching:name='fuzzy' fuzzylevel:name='0.7' matching:automationid='fuzzy' fuzzylevel:automationid='0.7' check:text='Translate…' /&gt;" Guid="096b69c7-461d-4010-bfd9-719308bf2d09" InformativeScreenshot="0f934dc483db942a881f97a57a4d4782.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/sTlzRc-Ik0mw8cxTkS88QA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'English(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="oG5Cyp5Qd0OBdFnqzBO4xg" DesignTimeRectangle="267, 18, 125, 48" ElementType="TabPage" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Translate this page?' role='alert' /&gt;&lt;ctrl name='*' role='page tab list' /&gt;&lt;ctrl name='English' role='page tab' /&gt;" Guid="0270b364-0edc-4849-99a2-d063e10fef1e" InformativeScreenshot="f2858a1739c83add9dc8f23ee0ebe179.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/-uub1EBSIE-mIlONXiYI3g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translate this page?' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr" ContentHash="9u1X7UNzL0WjfLbM4zFRSg" DesignTimeRectangle="397, 18, 42, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='*' role='alert' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" Guid="ef7d2e30-d488-4282-8e19-2439e5a0c3ff" InformativeScreenshot="3345c842c0c32a0b4ea48ac8ce34a868.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jhiz4dfDZEaheQlwTwb_0Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Translated' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="TEvamSZTTkO7GFoBgMBstQ" DesignTimeRectangle="101, 511, 1717, 47" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' aaname='Résultats de la recherche' /&gt;" Guid="e2fd4406-f2cb-4d12-8f43-8a8cbdac7738" InformativeScreenshot="282299699850f4d40146bf781f780a20.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/Ye0RhcXrbUShZWgu5XE1VQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'multi-active toner brum…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'multi-active toner brum…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="zQ592MXACkqXoCbV93NwGg" DesignTimeRectangle="659, 758, 222, 84" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl id='CardLink--*' tag='A' aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Split(&quot; &quot;c).Take(2))+&quot;*' /&gt;&quot;]" Guid="2c835cd2-ecac-4335-8f31-4ea5372a45c6" InformativeScreenshot="19ca13f2106456e7963c1edb4864c7fc.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/TkW4hSmCl0qatdST6X17dQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr/search" ContentHash="SFaAl6HmEkK_ul9g_LM7qA" DesignTimeRectangle="659, 758, 222, 84" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl id='CardLink--*' tag='A' aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.ToLower.Split(&quot; &quot;c).Take(2))+&quot;*' /&gt;&quot;]" Guid="11c78b71-0ca9-4445-b1f6-bb23e145eb16" InformativeScreenshot="4795b2a2d81433d047a8a1086c0d33f7.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/SuJ0NvOcK0-JC7oz3Jj-EQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State 'unchecked'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr/products/lotion-hydratante-active-active-moist" ContentHash="EoQrLhC6yEiO1FXNT5bykw" DesignTimeRectangle="1117, 616, 144, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='LABEL' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot; ml' /&gt;&quot;]" Guid="f9cd3834-a850-4dc6-b687-774a63750f6d" InformativeScreenshot="2fd64dea55600852c7d1705088a54abf.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/7WoHmxW2AkC8HmpFlN7gZw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr/products/lotion-hydratante-active-active-moist" ContentHash="dd4p6CBAB0uDMRgNvDGsrQ" DesignTimeRectangle="1117, 616, 144, 63" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl tag='LABEL' visibleinnertext='&quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot; ml' /&gt;&quot;]" Guid="e33cd774-aca4-4591-b0ef-93a039056278" InformativeScreenshot="72514808b2f643e8aafa72e560f0babf.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/0DxakBgyN0ynhrFbnTIUJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NCheckState DisplayName="Check App State '49.00€'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,810" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Version="V5">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,370.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text '49.00€(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" TextString="[str_DermalogicaFrancePrice]" Version="V5">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="dermalogica.fr/products/lotion-hydratante-active-multi-active-toner" ContentHash="H2Z3dbqSjECLK9lho95Reg" DesignTimeRectangle="1117, 504, 106, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*??.??*' tag='SPAN' /&gt;" Guid="9c2012bb-9878-4a8e-a25c-57da08b110f0" InformativeScreenshot="634cd0f631d105d162bde025358ef9ca.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/k80MYOy4RUGzJTUeIzhqxA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;The price of &quot; + in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot; on Dermalogica France website is: &quot; +str_DermalogicaFrancePrice]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="dermalogica.fr/products/lotion-hydratante-active-multi-active-toner" ContentHash="tIENVAp-gEyicr_yZtELNg" DesignTimeRectangle="1117, 504, 106, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*??.??*' tag='SPAN' /&gt;" Guid="c7b7bad5-8781-4e60-a5b1-d5217161f707" InformativeScreenshot="634cd0f631d105d162bde025358ef9ca.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jYCkyRVSeEmngYa4JDWtrw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NCheckState.Target>
+                  </uix:NCheckState>
+                  <uix:NGoToUrl DisplayName="Go To URL - dermalogica.fr" sap:VirtualizedContainerService.HintSize="452,114.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="a6911466-6e4a-4af7-9352-8a29c1e7af39" Url="https://dermalogica.fr/" Version="V5" />
                 </Sequence>
               </ActivityAction>
-            </ui:BrowserScope.Body>
-          </ui:BrowserScope>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.OCREngine>
+              <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                </ActivityFunc.Argument>
+              </ActivityFunc>
+            </uix:NApplicationCard.OCREngine>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="ABrPKHNduEOSHkkEonX30w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABZ0lEQVRYR+2WYXHDMAxGA6EQCmEQBmEQBmEIcmEwCIVQCIUwCIUwCNv3XNddXDm1nKQ/dtHd66WSbH92LMfdZmtY3/cn8VPBEJssa+p4E/DPBChxJ14tYsrI5J8vQMG9+BTnmDzFl/gQu9i2XYCczPbwJ8nDt3gTbQLkeBF0YiV7qO3jJkB/lhrcw0WAHlj2mne9NEnAkAWeRRLQsvRsNIQDzy19DAzOrrWCJaiQUG65ye9dySDA0+gQxyqacjgPrLYWQcAxc05hzjw35dWXoX5qD41T7P+hkZu1LbEJCAI85/4+jlE05XCoWW0tggBPFRzjOEVTjmdCQQDfACtYguW9uwfIRz+eioJ0ErZ+BxBT+74tkoD3LPAsLgIw/Zkzk1ZGAti9XK2sxLW4CcDkQMTcleAYrq2EsYCrKcCeaNmYiKcauDFb8RxbwNWUwKea2Uy9GmLcnlNp6pmVvLvCGzw82Fa2rvsFjOB3t4p+Nj0AAAAASUVORK5CYII=" InformativeScreenshot="45d3430b85298e6e2dd80790989f7678.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/V9ICkKDR2E-TraEJrirksw" Selector="&lt;html app='chrome.exe' url='https://dermalogica.fr/' /&gt;" Url="https://dermalogica.fr/" Version="V3">
+                <uix:TargetApp.Arguments>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.Arguments>
+                <uix:TargetApp.WorkingDirectory>
+                  <InArgument x:TypeArguments="x:String" />
+                </uix:TargetApp.WorkingDirectory>
+              </uix:TargetApp>
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -864,25 +570,25 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="590,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Logs a business rule exception message" sap:VirtualizedContainerService.HintSize="556,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;A business rule Exception occured&quot;]" />
+              <ui:LogMessage DisplayName="Logs a business rule exception message" sap:VirtualizedContainerService.HintSize="488,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;A business rule Exception occured&quot;]" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="590,274" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="522,274" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_Product.SpecificContent(&quot;Product Name&quot;).ToString,in_Product.SpecificContent(&quot;Oz&quot;).ToString,in_Product.SpecificContent(&quot;ml&quot;).ToString,str_ProductPrice.Trim,in_Config(&quot;DermalogicaFranceName&quot;).ToString,str_ProductException}]" DataTable="[io_dt_ProductReport]" DisplayName="Add product price monitoring data to report" sap:VirtualizedContainerService.HintSize="556,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_Product.SpecificContent(&quot;Product&quot;).ToString,in_Product.SpecificContent(&quot;Oz&quot;).ToString,in_Product.SpecificContent(&quot;Ml&quot;).ToString,str_DermalogicaFrancePrice.Trim,in_Config(&quot;DermalogicaFrance&quot;).ToString}]" DataTable="[io_dt_ProductReport]" DisplayName="Add product price monitoring data to report" sap:VirtualizedContainerService.HintSize="488,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

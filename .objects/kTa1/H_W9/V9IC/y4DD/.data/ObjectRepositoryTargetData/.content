@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="X5i8XaJHi0yAsURl5dPHKg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr" DesignTimeRectangle="542, 278, 858, 81" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' type='search' class='search__input field__input' placeholder='*' aaname='*' matching:id='fuzzy' fuzzylevel:id='0.7' matching:class='fuzzy' fuzzylevel:class='0.7' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3048ed7a-f02e-4c67-a32f-ff511c5c3b62" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Découvrez Dermalogica : le meilleur des soins visage' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a910c465c0e5b5fd66da88b3e5c06d7b.jpg" xmlns="">0K0Af2tUcqEqGooSIBx-QbA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

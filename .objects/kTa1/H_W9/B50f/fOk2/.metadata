@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Dermalogica Multi-Activ…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "fOk2-8MixE2RYsXxYW4GmA",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/fOk2-8MixE2RYsXxYW4GmA",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/B50fL3Gdqkm7uGIvcP3q2w",
+  "Created": "2026-05-08T20:34:26.1197673Z",
+  "Updated": "2026-05-08T20:34:26.1197673Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

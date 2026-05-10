@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NcXRRUnmIEGss10OiTBXqg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="beautyflash.co.uk" DesignTimeRectangle="105, 234, 331, 63" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='header' tag='IMG' /&gt;" Guid="c4ee0aa0-6397-4923-8263-fcd41030f046" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='63588899' title='Beauty Flash - Home Page' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="85d660957041b0b28d8de459e438a4ad.jpg" xmlns="">0ttXNGFzp30ezWVY5RQsykg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetFocus</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Shop SkinStore Favorites Now at Dermst",
+  "Type": "Screen",
+  "Id": "B50fL3Gdqkm7uGIvcP3q2w",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/B50fL3Gdqkm7uGIvcP3q2w",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/H_W9QIvOwkKXjfvrK92P_A",
+  "Created": "2026-05-08T20:21:51.4590358Z",
+  "Updated": "2026-05-08T20:21:51.4590358Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

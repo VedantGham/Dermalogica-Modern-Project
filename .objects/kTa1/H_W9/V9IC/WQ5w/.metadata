@@ -1,0 +1,13 @@
+﻿{
+  "Name": "French",
+  "Type": "Element",
+  "Id": "WQ5wqFMJyU6inc1vrBqGLw",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/WQ5wqFMJyU6inc1vrBqGLw",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/V9ICkKDR2E-TraEJrirksw",
+  "Created": "2026-05-09T13:45:28.7974933Z",
+  "Updated": "2026-05-09T13:45:28.7974933Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

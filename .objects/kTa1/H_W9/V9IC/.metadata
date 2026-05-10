@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Découvrez Dermalogica  le meilleur des",
+  "Type": "Screen",
+  "Id": "V9ICkKDR2E-TraEJrirksw",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/V9ICkKDR2E-TraEJrirksw",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/H_W9QIvOwkKXjfvrK92P_A",
+  "Created": "2026-05-09T13:39:11.1324159Z",
+  "Updated": "2026-05-09T13:39:11.1324159Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

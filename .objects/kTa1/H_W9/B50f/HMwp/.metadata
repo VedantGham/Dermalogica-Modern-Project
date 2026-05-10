@@ -1,0 +1,14 @@
+﻿{
+  "Name": "$87.00",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "HMwpg3l1f0-GiXrXg5dgfg",
+  "Reference": "mloyvZZYp0uchJWViZ6yLQ/HMwpg3l1f0-GiXrXg5dgfg",
+  "ParentRef": "mloyvZZYp0uchJWViZ6yLQ/B50fL3Gdqkm7uGIvcP3q2w",
+  "Created": "2026-05-10T14:44:58.8805056Z",
+  "Updated": "2026-05-10T14:44:58.8805056Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.31.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
