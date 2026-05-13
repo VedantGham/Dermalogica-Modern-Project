@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="H2Z3dbqSjECLK9lho95Reg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="T3YDOY79uEOTCVYs24tqcQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr/products/lotion-hydratante-active-multi-active-toner" DesignTimeRectangle="1117, 504, 106, 35" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*??.??*' tag='SPAN' /&gt;" Guid="9c2012bb-9878-4a8e-a25c-57da08b110f0" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/products/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="634cd0f631d105d162bde025358ef9ca.jpg" xmlns="">0nhlG0nR3gEW03mFwutL9vQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.fr/products/lotion-hydratante-active-active-moist" DesignTimeRectangle="1117, 503, 106, 35" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl isleaf='1' tag='FONT' aaname='*€*' /&gt;" Guid="5128a121-b5e9-4aa1-8196-c21c7dde33a4" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://dermalogica.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d4eb5a79b5a80d5b5800e7cea73343d9.jpg" xmlns="">0e8kYDuPyqUau7cARJjXRZw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="QT-x6_NjPkq9YatHv4PSYg" Reference="mloyvZZYp0uchJWViZ6yLQ/3pOUEFzO0U-KvcOy-HxXhw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="gIDZg6D61U2kmF8DoVWjsA" Reference="mloyvZZYp0uchJWViZ6yLQ/3pOUEFzO0U-KvcOy-HxXhw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" DesignTimeRectangle="1215, 640, 143, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="fff55ad0-369d-41b8-a7a5-071793b7ae2b" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="e22ce91aa315985daaabcc98ab75db0d.jpg" xmlns="">0L8U25ninYEm-wZj9-jlDtA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" DesignTimeRectangle="1215, 591, 141, 57" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*$*' /&gt;" Guid="fff55ad0-369d-41b8-a7a5-071793b7ae2b" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="631a7d3578946946157e25c20076f797.jpg" xmlns="">0Utc0hrGWlkeil0wA8_XO-Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>

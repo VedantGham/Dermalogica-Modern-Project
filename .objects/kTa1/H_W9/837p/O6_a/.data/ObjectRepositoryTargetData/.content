@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="wya-KyOrqkCxwmlKjJDdUA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="t9o-LLsQ1UWXwpMhZxgdhQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk/search" DesignTimeRectangle="422, 505, 513, 79" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" Guid="0bd154c0-c3ce-4dad-ad3e-eaad62509ac2" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="cb2ed283677f66fd14c6fe0df5d68f0e.jpg" xmlns="">0oYzqSrUQGEi46GukWfHEIg</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk/products/special-cleansing-gel" DesignTimeRectangle="422, 505, 513, 79" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='email' tag='INPUT' type='email' /&gt;" Guid="3b753317-715a-4bd8-8aca-050d6accef8e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Special Cleansing Gel, Gentle Face Wash | Dermalogica® – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cb2ed283677f66fd14c6fe0df5d68f0e.jpg" xmlns="">0lbg3qi0Ub06PnQKSK0JfQQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

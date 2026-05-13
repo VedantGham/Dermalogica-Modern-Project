@@ -3,6 +3,7 @@
     <x:Property Name="io_dt_ProductReport" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_Product" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="out_str_SkinStorePrice" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -114,12 +115,10 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Process extracts price from Skin store website" DisplayName="Skin_Store_Price_Extraction" sap:VirtualizedContainerService.HintSize="644,4392.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_SkinStorePrice" />
-    </Sequence.Variables>
+  <Sequence sap2010:Annotation.AnnotationText="Process extracts price from Skin store website" DisplayName="Skin_Store_Price_Extraction" sap:VirtualizedContainerService.HintSize="623.3333333333333,5006" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -127,21 +126,21 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message about price extraction" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Extracting price from skin store&quot;]" />
-    <TryCatch DisplayName="Try Extracting price from Skin Store Website" sap:VirtualizedContainerService.HintSize="524,4162.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Extracting price from Skin Store Website" sap:VirtualizedContainerService.HintSize="524,4776" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,3496.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="522,4154.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Shop SkinStore Favorites Now at Dermst" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,3436.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Shop SkinStore Favorites Now at Dermst" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4094.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,3242" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,3900" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -190,12 +189,12 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'svg'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,87.33333333333333" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'svg'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,195.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="dermstore.com/search" ContentHash="6JhyZ1rjo06Hw2YkoKXecA" DesignTimeRectangle="726, 189, 36, 36" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='search-bar-no-overlay' tag='svg' /&gt;" Guid="0a7f5386-c468-46f6-bc34-8b6972cf7cb8" InformativeScreenshot="5453d63a9ef1bf7d602e471de845f429.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/l194v0I8ik-d4wY8cMToIg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Dermalogica Multi-Activ…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,685.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
+                  <uix:NCheckState DisplayName="Check App State 'Dermalogica Multi-Activ…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,893.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
@@ -205,22 +204,24 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dermalogica Multi-Activ…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="dermstore.com/search" ContentHash="-q5Ew6MI1UyJ-oMQ3Ts-cA" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(3))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="40ed238b-f7c7-407f-9254-b154224da384" InformativeScreenshot="f0fcdf746cce3a77bc9812e96be9e118.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/yX35alxZI0y-RZ-6SgI46g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Found result for &amp;quot;Multi-Active Toner 8.4&amp;quot;' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="dermstore.com/search" ContentHash="jQxdj5BIT0KO6rpi8mecYg" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(2))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="40ed238b-f7c7-407f-9254-b154224da384" InformativeScreenshot="f0fcdf746cce3a77bc9812e96be9e118.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/yX35alxZI0y-RZ-6SgI46g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Found result for &amp;quot;Multi-Active Toner 8.4&amp;quot;' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                           </uix:NClick.Target>
                         </uix:NClick>
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGoToUrl DisplayName="Go To URL - dermstore.com" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Url="https://www.dermstore.com/c/skinstore/" Version="V5" />
+                        <Throw Exception="[New BusinessRuleException(in_Product.SpecificContent(&quot;Product&quot;).ToString+&quot; not found on skin store website&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="dermstore.com/search" ContentHash="tr9A0Bii4kiQoWjzzN4-vA" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(3))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="cedaf33e-a56e-422c-abd3-aadafbed875f" InformativeScreenshot="4a540873f4d67e603e7dee6da88e0c3b.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/fOk2-8MixE2RYsXxYW4GmA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="dermstore.com/search" ContentHash="it6chwq-90C7dR4Zj_NWPA" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(2))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="cedaf33e-a56e-422c-abd3-aadafbed875f" InformativeScreenshot="4a540873f4d67e603e7dee6da88e0c3b.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/fOk2-8MixE2RYsXxYW4GmA" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/search/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -263,17 +264,17 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NCheckState>
-                  <uix:NCheckState DisplayName="Check App State '$87.00'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,633.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
+                  <uix:NCheckState DisplayName="Check App State '$87.00'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1018" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Version="V5">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,194" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,370.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGetText DisplayName="Get Text '$49.00'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,134" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" TextString="[str_SkinStorePrice]" Version="V5">
+                        <uix:NGetText DelayBefore="1" DisplayName="Get Text '$49.00'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" TextString="[out_str_SkinStorePrice]" Version="V5">
                           <uix:NGetText.Target>
-                            <uix:TargetAnchorable BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" ContentHash="QT-x6_NjPkq9YatHv4PSYg" DesignTimeRectangle="1215, 640, 143, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="fff55ad0-369d-41b8-a7a5-071793b7ae2b" InformativeScreenshot="e22ce91aa315985daaabcc98ab75db0d.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/3pOUEFzO0U-KvcOy-HxXhw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="dermstore.com/p/dermalogica-multi-active-toner-250ml/10363536" ContentHash="gIDZg6D61U2kmF8DoVWjsA" DesignTimeRectangle="1215, 591, 141, 57" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*$*' /&gt;" Guid="fff55ad0-369d-41b8-a7a5-071793b7ae2b" InformativeScreenshot="631a7d3578946946157e25c20076f797.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/3pOUEFzO0U-KvcOy-HxXhw" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Complete" />
                           </uix:NGetText.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -282,23 +283,25 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </uix:NGetText>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The price of &quot; + in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;is: &quot; + out_str_SkinStorePrice]" />
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGoToUrl DisplayName="Go To URL - dermstore.com" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Url="https://www.dermstore.com/c/skinstore/" Version="V5" />
+                        <Throw Exception="[New BusinessRuleException(&quot;Price of &quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString+&quot; not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="dermstore.com/p/dermalogica-dynamic-skin-recovery-spf-50-48ml/14935522" ContentHash="3mLQp9XpYEmL6lGoCDuAEA" DesignTimeRectangle="1215, 619, 137, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="2c88d64e-4796-4dcb-b28a-605a114af688" InformativeScreenshot="99df39d326c9da799c3bcefc11d7313d.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/HMwpg3l1f0-GiXrXg5dgfg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="dermstore.com/p/dermalogica-dynamic-skin-recovery-spf-50-48ml/14935522" ContentHash="ttOGe9ZAwkyw2gDdk08LVw" DesignTimeRectangle="1215, 556, 141, 57" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*$*' /&gt;" Guid="2c88d64e-4796-4dcb-b28a-605a114af688" InformativeScreenshot="631a7d3578946946157e25c20076f797.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/HMwpg3l1f0-GiXrXg5dgfg" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermstore.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,87.33333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The price of &quot; + in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;is: &quot; + str_SkinStorePrice]" />
-                  <uix:NGoToUrl DisplayName="Go To URL - dermstore.com" sap:VirtualizedContainerService.HintSize="452,70" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Url="https://www.dermstore.com/c/skinstore/" Version="V5" />
+                  <uix:NGoToUrl DisplayName="Go To URL - dermstore.com" sap:VirtualizedContainerService.HintSize="452,114.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="4e6e27b8-8b4f-42e0-aee3-0d13dae5a3bc" Url="https://www.dermstore.com/c/skinstore/" Version="V5" />
                 </Sequence>
               </ActivityAction>
             </uix:NApplicationCard.Body>
@@ -310,7 +313,7 @@
               </ActivityFunc>
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="Wnx_5LXH7UeZCRJvpC98EQ" IconBase64="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" InformativeScreenshot="b87da5bca1d04f30c67d79d8bdde3ffc.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/B50fL3Gdqkm7uGIvcP3q2w" Selector="&lt;html app='chrome.exe' title='Shop SkinStore Favorites Now at Dermstore | Dermstore' /&gt;" Url="https://www.dermstore.com/c/skinstore/" Version="V3">
+              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="Wnx_5LXH7UeZCRJvpC98EQ" IconBase64="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" InformativeScreenshot="b87da5bca1d04f30c67d79d8bdde3ffc.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/B50fL3Gdqkm7uGIvcP3q2w" Selector="&lt;html app='chrome.exe' url='https://www.dermstore.com/c/skinstore/' /&gt;" Url="https://www.dermstore.com/c/skinstore/" Version="V3">
                 <uix:TargetApp.Arguments>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.Arguments>
@@ -323,30 +326,45 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-          <ActivityAction x:TypeArguments="s:Exception">
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
             <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Catch - BusinessRuleException" sap:VirtualizedContainerService.HintSize="522,108" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log system exception message" sap:VirtualizedContainerService.HintSize="488,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;System Exception occured&quot; + Exception.Message]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="488,48" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Catch - Exception" sap:VirtualizedContainerService.HintSize="522,284.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log system exception message" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;System Exception occured&quot; + Exception.Message]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="488,48" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="522,274" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="522,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_Product.SpecificContent(&quot;Product&quot;).ToString,in_Product.SpecificContent(&quot;Oz&quot;).ToString,in_Product.SpecificContent(&quot;Ml&quot;).ToString,str_SkinStorePrice,in_Config(&quot;SkinStore&quot;).ToString}]" DataTable="[io_dt_ProductReport]" DisplayName="Add product details to report" sap:VirtualizedContainerService.HintSize="488,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

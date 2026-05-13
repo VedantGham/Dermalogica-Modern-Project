@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="NTYgmZCRekijc7pb6iTSOg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="F3q6uqlpw0WxSRcn1FXpwA" Reference="mloyvZZYp0uchJWViZ6yLQ/b705JrWxGEqnQxzdw5JFwg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk" DesignTimeRectangle="11, 195, 1905, 100" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='header-component' tag='DIV' /&gt;" Guid="77a1919f-d77c-41b7-ac6a-031c4b1831f8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica Skin Care | Official – Dermalogica UK' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="781e72d7deeca9cfcf18303899aa818f.jpg" xmlns="">0aXBJCnRy8kCIdnuhXr85kg</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.co.uk" DesignTimeRectangle="11, 195, 1905, 100" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='header-component' tag='DIV' /&gt;" Guid="77a1919f-d77c-41b7-ac6a-031c4b1831f8" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.co.uk/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="781e72d7deeca9cfcf18303899aa818f.jpg" xmlns="">0YadW2-n5x0yOEZOeczrXMQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

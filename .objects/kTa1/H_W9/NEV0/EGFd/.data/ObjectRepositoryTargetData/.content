@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aOcpCIzrgEiBZrW5Fns2nQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com/products/precleanse" DesignTimeRectangle="1173, 663, 65, 42" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='price-item' tag='H3' aaname='*' /&gt;" Guid="3a561123-3b00-4973-ab22-db3d479f93e3" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3503b976fc02b32e8e8bea8c43a69df2.jpg" xmlns="">00rZsjj9LJESNyjp1VBdg9w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

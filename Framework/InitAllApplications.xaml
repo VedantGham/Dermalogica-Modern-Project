@@ -104,7 +104,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="670.6666666666666,1396.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="637.3333333333333,1396.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="arr_str_websites" />
     </Sequence.Variables>
@@ -147,7 +147,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="0ebf7f0b-beba-4343-b290-93b4c9e17cc2" Url="[currentWebsite]" Version="V5" />
+                    <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="0ebf7f0b-beba-4343-b290-93b4c9e17cc2" Url="[currentWebsite]" Version="V5" />
                     <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="0ebf7f0b-beba-4343-b290-93b4c9e17cc2" Shortcuts="[d(hk)][d(ctrl)]t[u(ctrl)][u(hk)]" Version="V5" />
                   </Sequence>
                 </ActivityAction>

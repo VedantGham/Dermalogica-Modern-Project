@@ -3,6 +3,7 @@
     <x:Property Name="in_Product" Type="InArgument(ui:QueueItem)" />
     <x:Property Name="io_dt_ProductReport" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_str_LookFantasticPrice" Type="OutArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -111,12 +112,10 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Process extracts price from Look fantastic website" DisplayName="Look_Fantastic_Price_Extraction" sap:VirtualizedContainerService.HintSize="644,7048.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="NA" Name="str_LookFantasticPrice" />
-    </Sequence.Variables>
+  <Sequence sap2010:Annotation.AnnotationText="Process extracts price from Look fantastic website" DisplayName="Look_Fantastic_Price_Extraction" sap:VirtualizedContainerService.HintSize="623.3333333333333,7238.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,21 +123,21 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message for Dermalogica price extraction" sap:VirtualizedContainerService.HintSize="560,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Extracting price from look fantastic website&quot;]" />
-    <TryCatch DisplayName="Try extracting price from Look fantastic website" sap:VirtualizedContainerService.HintSize="560,6818.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try extracting price from Look fantastic website" sap:VirtualizedContainerService.HintSize="560,7008.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="558,5948.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="558,6387.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome LOOKFANTASTIC - Beauty, Fragrances, Sk" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,5888.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome LOOKFANTASTIC - Beauty, Fragrances, Sk" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,6327.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V2" WindowResize="Maximize">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,5694" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,6132.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -294,7 +293,7 @@
                       <uix:TargetAnchorable BrowserURL="lookfantastic.com" ContentHash="mtr3frcijkas2_hKfGW-sQ" DesignTimeRectangle="725, 313, 36, 36" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='search-bar-no-overlay' tag='svg' /&gt;" Guid="e76e532d-e92e-41ad-aa7f-235ee990e563" InformativeScreenshot="2dd4df7b819a63deaf36fb1833459e9f.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/lTse3FPyoE6Q_8e5D5APgA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='LOOKFANTASTIC - Beauty, Fragrances, Skincare &amp;amp; Haircare' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'IMG'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,702.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V5">
+                  <uix:NCheckState DisplayName="Check App State 'IMG'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,893.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V5">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_30">
                         <sap:WorkflowViewStateService.ViewState>
@@ -310,30 +309,14 @@
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,298.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_31">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_39">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Throw Exception="[New BusinessRuleException(&quot;The product&quot; + in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;not available on Look Fantastic website&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:CommentOut>
+                        <uix:NGoToUrl DisplayName="Go To URL - lookfantastic.com" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Url="https://www.lookfantastic.com/" Version="V5" />
+                        <Throw Exception="[New BusinessRuleException(&quot;The product&quot; + in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;not available on Look Fantastic website&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
@@ -374,7 +357,7 @@
                       <uix:TargetAnchorable BrowserURL="lookfantastic.com/p/dermalogica-multi-active-toner-250ml/10363536" ContentHash="zYyTx0RlUUO2nEoy0TrcEA" DesignTimeRectangle="1364, 820, 151, 84" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='  &quot;+in_Product.SpecificContent(&quot;Ml&quot;).ToString+&quot;ml  ' parentid='size-wrapper' tag='BUTTON' type='button' /&gt;&quot;]" Guid="35c9b000-b243-4d4b-83ed-b519055ff2df" InformativeScreenshot="bef053168a494dd24afac503ecda111a.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/spdjRTgCoEWwmSZoydTcEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
-                  <uix:NCheckState DisplayName="Check and log product price from Look Fantastic" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,946.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V5">
+                  <uix:NCheckState DisplayName="Check and log product price from Look Fantastic" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,1194.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Version="V5">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,370.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
                         <sap:WorkflowViewStateService.ViewState>
@@ -382,26 +365,28 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGetText DisplayName="Get product price from lookfantastic.com" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" TextString="[str_LookFantasticPrice]" Version="V5">
+                        <uix:NGetText DisplayName="Get product price from lookfantastic.com" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,143.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" TextString="[out_str_LookFantasticPrice]" Version="V5">
                           <uix:NGetText.Target>
-                            <uix:TargetAnchorable BrowserURL="lookfantastic.com/p/the-inkey-list-omega-water-cream-moisturizer-50ml/13493315" ContentHash="4-IldVjym0yBqHTXgYMc-A" DesignTimeRectangle="1215, 380, 115, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="8538ea6f-9d3f-4cba-8986-c98439e4846a" InformativeScreenshot="cd38af8b8657941b142d9ad2284399fe.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jdrW9bkvI02njAAbB-v96Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="lookfantastic.com/p/the-inkey-list-omega-water-cream-moisturizer-50ml/13493315" ContentHash="s8aSqubxaU2D027gQ44TQg" DesignTimeRectangle="1215, 830, 115, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*£*' /&gt;" Guid="8538ea6f-9d3f-4cba-8986-c98439e4846a" InformativeScreenshot="979c3fab9f6ab493d5aa0ae6f61e7bd7.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jdrW9bkvI02njAAbB-v96Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                           </uix:NGetText.Target>
                         </uix:NGetText>
-                        <ui:LogMessage DisplayName="Log product price from Look Fantastic website" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The price of: &quot;+ in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;in Look fantastic website is: &quot; + str_LookFantasticPrice]" />
+                        <ui:LogMessage DisplayName="Log product price from Look Fantastic website" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The price of: &quot;+ in_Product.SpecificContent(&quot;Product&quot;).ToString + &quot;in Look fantastic website is: &quot; + out_str_LookFantasticPrice]" />
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,227.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,475.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Price not available&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Price not available&quot;]" />
+                        <uix:NGoToUrl DisplayName="Go To URL - lookfantastic.com" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Url="https://www.lookfantastic.com/" Version="V5" />
+                        <Throw Exception="[New BusinessRuleException(&quot;Price of &quot;+ in_Product.SpecificContent(&quot;Product&quot;).ToString+&quot; not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="lookfantastic.com/p/the-inkey-list-omega-water-cream-moisturizer-50ml/13493315" ContentHash="4-IldVjym0yBqHTXgYMc-A" DesignTimeRectangle="1215, 380, 115, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*' /&gt;" Guid="8538ea6f-9d3f-4cba-8986-c98439e4846a" InformativeScreenshot="cd38af8b8657941b142d9ad2284399fe.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jdrW9bkvI02njAAbB-v96Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="lookfantastic.com/p/the-inkey-list-omega-water-cream-moisturizer-50ml/13493315" ContentHash="s8aSqubxaU2D027gQ44TQg" DesignTimeRectangle="1215, 830, 115, 48" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='product-price' tag='SPAN' aaname='*£*' /&gt;" Guid="8538ea6f-9d3f-4cba-8986-c98439e4846a" InformativeScreenshot="979c3fab9f6ab493d5aa0ae6f61e7bd7.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/jdrW9bkvI02njAAbB-v96Q" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
                   <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL - lookfantastic.com" sap:VirtualizedContainerService.HintSize="488,114.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="0efeee93-a826-4a10-9e41-56cf3b5ae6d2" Url="https://www.lookfantastic.com/" Version="V5" />
@@ -416,7 +401,7 @@
               </ActivityFunc>
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="xqxqCPt3skeuQnaMMvi4Tw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgBAMAAAAQtmoLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURSIrMSMsMlphZmJpbYOIi4mOkY+Ul5WanJqfoba5u7y/wcfJyvX19f///zs3Ut0AAABnSURBVFjDYxgFo2AUjAL6AN67QBCA4HPcRQM3RzUMmIYrLgjgTIyGiwy4waiGUQ2kaLhzBgYSiNOAAAWjGqin4VoaDCgQp2E0eY9qgGpYgqg/vInSgA5GNdBdwygYBaNgFNAEMDAAADT6hMUNqvcMAAAAAElFTkSuQmCC" InformativeScreenshot="f2d01d20a3c6fc4559bfdaac82363839.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw" Selector="&lt;html app='chrome.exe' title='LOOKFANTASTIC - Beauty, Fragrances, Skincare &amp;amp; Haircare' /&gt;" Url="https://www.lookfantastic.com/" Version="V3">
+              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="xqxqCPt3skeuQnaMMvi4Tw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAGAAAABgBAMAAAAQtmoLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAqUExURSIrMSMsMlphZmJpbYOIi4mOkY+Ul5WanJqfoba5u7y/wcfJyvX19f///zs3Ut0AAABnSURBVFjDYxgFo2AUjAL6AN67QBCA4HPcRQM3RzUMmIYrLgjgTIyGiwy4waiGUQ2kaLhzBgYSiNOAAAWjGqin4VoaDCgQp2E0eY9qgGpYgqg/vInSgA5GNdBdwygYBaNgFNAEMDAAADT6hMUNqvcMAAAAAElFTkSuQmCC" InformativeScreenshot="f2d01d20a3c6fc4559bfdaac82363839.jpg" Reference="mloyvZZYp0uchJWViZ6yLQ/2rAMa63uwEq3SCHnOjxLSw" Selector="&lt;html app='chrome.exe' url='https://www.lookfantastic.com/' /&gt;" Url="https://www.lookfantastic.com/" Version="V3">
                 <uix:TargetApp.Arguments>
                   <InArgument x:TypeArguments="x:String" />
                 </uix:TargetApp.Arguments>
@@ -434,7 +419,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,284.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Catch - BusinessRuleException" sap:VirtualizedContainerService.HintSize="558,284.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -450,7 +435,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,108" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <Sequence DisplayName="Catch - Exception" sap:VirtualizedContainerService.HintSize="558,108" sap2010:WorkflowViewState.IdRef="Sequence_38">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -462,13 +447,12 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="558,274" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="558,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_Product.SpecificContent(&quot;Product&quot;).ToString,in_Product.SpecificContent(&quot;Oz&quot;).ToString,in_Product.SpecificContent(&quot;Ml&quot;).ToString,str_LookFantasticPrice,in_Config(&quot;LookFantastic&quot;).ToString}]" DataTable="[io_dt_ProductReport]" DisplayName="Add product name and price to product report data table" sap:VirtualizedContainerService.HintSize="524,214" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

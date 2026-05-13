@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="au5JaiMRi0Cj6lHzovoO3w" Reference="mloyvZZYp0uchJWViZ6yLQ/R7WTNfaNCUec51RQKsVpkQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="3LII8eYsAkGnzTkmEDPBVA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="1132, 243, 746, 746" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Dermalogica&amp;apos;s Biggest Event of the Year: Get up to 6 free gifts + travel bag' tag='IMG' /&gt;" Guid="0f99e062-9959-426d-9d50-179e0d248fe5" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
-      <imageRef attrName="InformativeScreenshot" originalValue="dc55dd56d0ec5b113ec2f5d71de80d63.jpg" xmlns="">0lgbOBIQGnUqNFcg9A2mToQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="534, 546, 558, 73" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Enter Phone Number:' tag='INPUT' type='tel' /&gt;" Guid="8c56a8a7-e8ed-487a-a4ba-a78e66f37cd9" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2be147f5d46408b92388de7ab009ac4d.jpg" xmlns="">0a-6z2U6zIUKOf1rtd77uow</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">CheckState</x:String>
   </ObjectRepositoryTargetData.Data>

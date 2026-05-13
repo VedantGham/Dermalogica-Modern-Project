@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="1CUZF_8OS0yO16b0oNuIJw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="mmr5XJXKa0ejCInmhi9vVA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="1225, 276, 66, 66" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='                                                                       ' aria-label='what are you looking for?' tag='BUTTON' /&gt;" Guid="b5fa5cc5-7781-476a-96a2-e3e6ba8aa918" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="767528a655db817ce4f97894c0f06ae9.jpg" xmlns="">0RHfj0rKy5Em57g4oL-_tuA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="1225, 276, 66, 66" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='                                                                       ' tag='BUTTON' parentclass='field' parentid='shopify-section-header' /&gt;" Guid="80cffd30-1b78-41bc-aad9-529ab7f06081" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="640fef4829621a187c20031e68d6f659.jpg" xmlns="">0hlnasIzPaUa-FmIY0qNUdw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

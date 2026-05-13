@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="-q5Ew6MI1UyJ-oMQ3Ts-cA" Reference="mloyvZZYp0uchJWViZ6yLQ/yX35alxZI0y-RZ-6SgI46g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="jQxdj5BIT0KO6rpi8mecYg" Reference="mloyvZZYp0uchJWViZ6yLQ/yX35alxZI0y-RZ-6SgI46g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/search" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(3))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="40ed238b-f7c7-407f-9254-b154224da384" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Found result for &amp;quot;Multi-Active Toner 8.4&amp;quot;' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="f0fcdf746cce3a77bc9812e96be9e118.jpg" xmlns="">08ZLK0RviJkCt4-zT0VswXw</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermstore.com/search" DesignTimeRectangle="1449, 594, 399, 66" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;webctrl aaname='*&quot;+in_Product.SpecificContent(&quot;Product&quot;).ToString.Join(&quot; &quot;,in_Product.SpecificContent(&quot;Product&quot;).ToString.Split(&quot; &quot;c).Take(2))+&quot;*' parentid='product-list' tag='A' /&gt;&quot;]" Guid="40ed238b-f7c7-407f-9254-b154224da384" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Found result for &amp;quot;Multi-Active Toner 8.4&amp;quot;' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f0fcdf746cce3a77bc9812e96be9e118.jpg" xmlns="">0U2KTaBL2EEOJLDKuk4i5cg</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

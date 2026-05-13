@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="taJuwsw6lE2WdxlBCqAfVw" Reference="mloyvZZYp0uchJWViZ6yLQ/9zQzF7m68Em2Va_y12mfyw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="JCcNtH0AYE-1q0ycrOIHiw" Reference="mloyvZZYp0uchJWViZ6yLQ/9zQzF7m68Em2Va_y12mfyw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr/dermalogica/daily-skin-health-gel-moussant-purifiant-pour-tous-types-de-peau/p-488533" DesignTimeRectangle="1804, 483, 81, 30" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pd-price' tag='DIV' innertext='*' /&gt;" Guid="d36c491c-0da5-44e3-a926-dbfa91523f98" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="cb112818ffbd57ec00ce91d212b11cc7.jpg" xmlns="">0qZKge85Sj02JLEeB3Wh5rQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="notino.fr/dermalogica/daily-skin-health-gel-moussant-purifiant-pour-tous-types-de-peau/p-488533" DesignTimeRectangle="1804, 761, 81, 30" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='pd-price' tag='DIV' visibleinnertext='*€*' /&gt;" Guid="d36c491c-0da5-44e3-a926-dbfa91523f98" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.notino.fr/*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="89405a5644c14e22a8f4fa3b29006773.jpg" xmlns="">0HKW074wGgE2EgF0DW58mlQ</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">GetText</x:String>
   </ObjectRepositoryTargetData.Data>

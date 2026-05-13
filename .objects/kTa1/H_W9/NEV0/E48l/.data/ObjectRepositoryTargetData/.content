@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="gErufrXibEmAriuBepY41w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="W1dAlSw4BE-2LlOoVXn7ow" Reference="mloyvZZYp0uchJWViZ6yLQ/E48lHfD-EUCVXjoKG8T8iA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="577, 276, 714, 67" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' /&gt;" Guid="1c50ef01-41e6-4536-a6a3-ee589af4ed13" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Dermalogica® Skin Care | Official Site' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="7c57783f097ede6c2787c85f27f32b5b.jpg" xmlns="">0zvJQo-MFh0iBT9cXtQ-eRQ</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dermalogica.com" DesignTimeRectangle="577, 276, 714, 67" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='Search-In-Modal' tag='INPUT' /&gt;" Guid="1c50ef01-41e6-4536-a6a3-ee589af4ed13" ScopeSelectorArgument="&lt;html app='chrome.exe' url='https://www.dermalogica.com/' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="7c57783f097ede6c2787c85f27f32b5b.jpg" xmlns="">0IAJG0SKaIk-AVA7LJby9jw</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">TypeInto</x:String>
   </ObjectRepositoryTargetData.Data>
